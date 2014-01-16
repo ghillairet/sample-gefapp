@@ -17,19 +17,17 @@ import com.google.gwt.user.client.ui.Widget;
 public  class DiagramView extends Composite implements DiagramPresenter.View {
 
 	interface Binder extends UiBinder<Widget, DiagramView> {}
-	
+
 	private static Binder uiBinder = GWT.create(Binder.class);
-	
+
 	@UiField HTMLPanel diagramOutterPanel;
-	
-//	@UiField DiagramPresenter.ControlView controlPanel;
-	
+
 	@UiField HTMLPanel diagramPanel;
-	
+
 	private final org.eclipse.swt.widgets.Composite viewerComposite;
-	
+
 	private GraphicalViewer viewer;
-	
+
 	public DiagramView() {
 		initWidget(uiBinder.createAndBindUi(this));
 		viewerComposite = new org.eclipse.swt.widgets.Composite(null, SWT.NONE);
@@ -45,24 +43,5 @@ public  class DiagramView extends Composite implements DiagramPresenter.View {
 		viewerComposite.setSize(1200, 1200);
 		diagramPanel.add(viewerComposite.getGwtWidget());
 	}
-	
-//	@Override
-//	public void moveLeft(SidebarPresenter.Panes pane) {
-//		Style style = diagramOutterPanel.getElement().getStyle();
-//		style.setLeft(40, Unit.PX);
-//	}
-//	
-//	@Override
-//	public void moveRight(Panes pane) {
-//		Style style = diagramOutterPanel.getElement().getStyle();
-//		if (pane.equals(SidebarPresenter.Panes.PALETTE))
-//			style.setLeft(pane.getWidth() + 40, Unit.PX);
-//		else style.setLeft(pane.getWidth() + 40, Unit.PX);
-//	}
-	
-//	@Override
-//	public DiagramPresenter.ControlView getControlView() {
-//		return controlPanel;
-//	}
 
 }

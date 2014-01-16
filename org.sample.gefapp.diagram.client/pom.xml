@@ -14,6 +14,7 @@
 	<properties>
         <gwt.module>org.sample.gefapp.model.EntitiesApp</gwt.module>
         <gwt.style>OBF</gwt.style>
+        <gwt.log>INFO</gwt.log>
 	</properties>
 
 	<dependencies>
@@ -75,7 +76,7 @@
 					<module>${gwt.module}</module>
 					<!-- <appEngineVersion>${gae.version}</appEngineVersion> -->
 					<!-- <appEngineHome>${gae.home}</appEngineHome> -->
-					<logLevel>TRACE</logLevel>
+					<logLevel>${gwt.log}</logLevel>
 					<style>${gwt.style}</style>
 					<warSourceDirectory>webapp</warSourceDirectory>
 					<extraJvmArgs>-Xss512m -Xmx1024m -XX:MaxPermSize=1024m</extraJvmArgs>
