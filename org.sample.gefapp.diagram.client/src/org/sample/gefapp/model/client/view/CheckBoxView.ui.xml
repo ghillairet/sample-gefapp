@@ -1,0 +1,14 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+			xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<ui:style>
+		.item { padding: 5px; color: black; }
+	</ui:style>
+
+	<g:HTMLPanel styleName="{style.item}">
+		<g:Label ui:field="label"></g:Label>
+		<g:CheckBox ui:field="check"></g:CheckBox>
+	</g:HTMLPanel>
+
+</ui:UiBinder>

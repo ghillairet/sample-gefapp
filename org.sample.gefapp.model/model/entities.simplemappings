@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" xmlns:gmfmap="http://www.eclipse.org/gmf/2008/mappings" xmlns:gmftool="http://www.eclipse.org/gmf/2005/ToolDefinition" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:simplemap="http://org.msl.simple.gmfmap/simplemappings_1.1">
+  <simplemap:SimpleMapping xmi:id="_3USBAHheEeO6Je1EhEsJRA">
+    <children xmi:type="simplemap:SimpleTopNode" xmi:id="_6062MHheEeO6Je1EhEsJRA">
+      <nodeReference xmi:type="gmfmap:TopNodeReference" href="entities.gmfmap#//@nodes.0"/>
+      <children xmi:type="simplemap:SimpleCompartment" xmi:id="_H9Aw4H7NEeOapJjjBUquhA" needsTitle="false">
+        <children xmi:type="simplemap:SimpleSubNode" xmi:id="_XpJ5oH7NEeOapJjjBUquhA">
+          <nodeReference xmi:type="gmfmap:ChildReference" href="entities.gmfmap#//@nodes.0/@ownedChild/@children.0"/>
+        </children>
+        <compartmentMapping xmi:type="gmfmap:CompartmentMapping" href="entities.gmfmap#//@nodes.0/@ownedChild/@compartments.0"/>
+      </children>
+    </children>
+    <children xmi:type="simplemap:SimpleLinkMapping" xmi:id="_RC-24H7NEeOapJjjBUquhA" name="superType">
+      <linkMapping xmi:type="gmfmap:LinkMapping" href="entities.gmfmap#//@links.0"/>
+    </children>
+    <canvas xmi:type="gmfgraph:Canvas" href="entities.gmfgraph#ui"/>
+    <palette xmi:type="gmftool:Palette" href="entities.gmftool#/"/>
+    <mapping xmi:type="gmfmap:Mapping" href="entities.gmfmap#/"/>
+  </simplemap:SimpleMapping>
+  <notation:Diagram xmi:id="_3VDdEHheEeO6Je1EhEsJRA" type="Simplemap" element="_3USBAHheEeO6Je1EhEsJRA" name="entities.simplemappings" measurementUnit="Pixel">
+    <children xmi:type="notation:Node" xmi:id="_61ZXUHheEeO6Je1EhEsJRA" type="1001" element="_6062MHheEeO6Je1EhEsJRA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_61bzkHheEeO6Je1EhEsJRA" type="4003"/>
+      <children xmi:type="notation:Node" xmi:id="_H9i8YH7NEeOapJjjBUquhA" type="2002" element="_H9Aw4H7NEeOapJjjBUquhA">
+        <children xmi:type="notation:DecorationNode" xmi:id="_H9jjcH7NEeOapJjjBUquhA" type="4002"/>
+        <children xmi:type="notation:Node" xmi:id="_XpQnUH7NEeOapJjjBUquhA" type="2003" element="_XpJ5oH7NEeOapJjjBUquhA">
+          <children xmi:type="notation:DecorationNode" xmi:id="_XpROYH7NEeOapJjjBUquhA" type="4001"/>
+          <styles xmi:type="notation:DescriptionStyle" xmi:id="_XpQnUX7NEeOapJjjBUquhA"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_XpQnUn7NEeOapJjjBUquhA" fontName="Lucida Grande"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_XpQnU37NEeOapJjjBUquhA"/>
+        </children>
+        <styles xmi:type="notation:DescriptionStyle" xmi:id="_H9i8YX7NEeOapJjjBUquhA"/>
+        <styles xmi:type="notation:FontStyle" xmi:id="_H9i8Yn7NEeOapJjjBUquhA" fontName="Lucida Grande"/>
+        <styles xmi:type="notation:LineStyle" xmi:id="_H9i8Y37NEeOapJjjBUquhA"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_H9i8ZH7NEeOapJjjBUquhA"/>
+      </children>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_61ZXUXheEeO6Je1EhEsJRA"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_61ZXUnheEeO6Je1EhEsJRA" fontName="Lucida Grande"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_61ZXU3heEeO6Je1EhEsJRA" x="72" y="54" width="245"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_RDGLoH7NEeOapJjjBUquhA" type="1002" element="_RC-24H7NEeOapJjjBUquhA">
+      <children xmi:type="notation:DecorationNode" xmi:id="_RDGLpH7NEeOapJjjBUquhA" type="4004"/>
+      <styles xmi:type="notation:DescriptionStyle" xmi:id="_RDGLoX7NEeOapJjjBUquhA"/>
+      <styles xmi:type="notation:FontStyle" xmi:id="_RDGLon7NEeOapJjjBUquhA" fontName="Lucida Grande"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RDGLo37NEeOapJjjBUquhA" x="81" y="189" width="144"/>
+    </children>
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_3VEEIHheEeO6Je1EhEsJRA"/>
+  </notation:Diagram>
+</xmi:XMI>

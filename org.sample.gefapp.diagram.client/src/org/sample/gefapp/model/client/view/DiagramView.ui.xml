@@ -1,0 +1,11 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+			xmlns:g="urn:import:com.google.gwt.user.client.ui"
+			xmlns:v="urn:import:org.sample.gefapp.model.client.view">
+
+
+	<g:HTMLPanel ui:field="diagramOutterPanel" styleName="diagram-outter">
+		<g:HTMLPanel ui:field="diagramPanel" styleName="diagram-edit"></g:HTMLPanel>
+	</g:HTMLPanel>
+
+</ui:UiBinder>
