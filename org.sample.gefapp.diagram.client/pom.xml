@@ -75,7 +75,7 @@
 					<module>${gwt.module}</module>
 					<!-- <appEngineVersion>${gae.version}</appEngineVersion> -->
 					<!-- <appEngineHome>${gae.home}</appEngineHome> -->
-					<logLevel>INFO</logLevel>
+					<logLevel>TRACE</logLevel>
 					<style>${gwt.style}</style>
 					<warSourceDirectory>webapp</warSourceDirectory>
 					<extraJvmArgs>-Xss512m -Xmx1024m -XX:MaxPermSize=1024m</extraJvmArgs>

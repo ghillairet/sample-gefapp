@@ -78,7 +78,7 @@ public  class DiagramPresenter implements Presenter {
 			diagram.setElement(model);
 	
 			Resource domain = clientFactory.getResourceSet().createResource(
-					resource.getURI().trimFileExtension().appendFileExtension("fsm"));
+					resource.getURI().trimFileExtension().appendFileExtension("client"));
 	
 			domain.getContents().add(model);
 			resource.getContents().add(diagram);
