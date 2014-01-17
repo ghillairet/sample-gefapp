@@ -70,11 +70,11 @@
 
 				<g:HTMLPanel styleName="{style.diagram-control}">
 
-					<g:HTMLPanel styleName="{style.diagram-control-group}">
-						<g:HTMLPanel ui:field="menuButton" styleName="{style.icon-button}">
-							<g:Image resource='{res.file}'/>
-						</g:HTMLPanel>
-					</g:HTMLPanel>
+<!-- 					<g:HTMLPanel styleName="{style.diagram-control-group}"> -->
+<!-- 						<g:HTMLPanel ui:field="menuButton" styleName="{style.icon-button}"> -->
+<!-- 							<g:Image resource='{res.file}'/> -->
+<!-- 						</g:HTMLPanel> -->
+<!-- 					</g:HTMLPanel> -->
 
 					<g:HTMLPanel styleName="{style.diagram-control-group}">
 						<g:HTMLPanel ui:field="paletteButton" styleName="{style.icon-button}">

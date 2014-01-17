@@ -3,9 +3,24 @@
 			xmlns:g="urn:import:com.google.gwt.user.client.ui"
 			xmlns:v="urn:import:org.sample.gefapp.model.client.view">
 
+	<ui:style>
+		.diagram-outter {
+			position: absolute;
+			top: 40px;
+			right: 0px;
+			bottom: 0px;
+			left: 40px;
+			overflow: hidden;
+		}
+		.diagram-edit {
+			background: none repeat scroll 0% 0% white;
+			width: 100%;
+			height: 100%;
+		}
+	</ui:style>
 
-	<g:HTMLPanel ui:field="diagramOutterPanel" styleName="diagram-outter">
-		<g:HTMLPanel ui:field="diagramPanel" styleName="diagram-edit"></g:HTMLPanel>
+	<g:HTMLPanel ui:field="diagramOutterPanel" styleName="{style.diagram-outter}">
+		<g:HTMLPanel ui:field="diagramPanel" styleName="{style.diagram-edit}"></g:HTMLPanel>
 	</g:HTMLPanel>
 
 </ui:UiBinder>

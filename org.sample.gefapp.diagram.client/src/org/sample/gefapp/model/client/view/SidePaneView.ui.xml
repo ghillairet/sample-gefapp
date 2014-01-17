@@ -3,33 +3,20 @@
 			xmlns:g="urn:import:com.google.gwt.user.client.ui">
 
 	<ui:style>
-		.sidebar-pane-controls {
-			float: right;
-			text-align: right;
-			margin-bottom: 10px;
-		}
-		.close {
-			text-decoration: none;
-			opacity: 0.4;
-			font-family: Arial, Helvetica, sans-serif !important;
-			font-size: 20px !important;
-			font-weight: bold !important;
-			text-shadow: 0 1px 0 #ffffff !important;
-			opacity: 0.4;
-			margin: 7px 0 0 7px;
-			padding: 0px;
+		.side-pane {
+			height: 100%;
 			position: absolute;
-			border-radius: 3px;
-			top: 0;
-			right: 9px;
-			cursor: pointer;
+			left: 0;
+			top: 40px;
+			display: block;
+			overflow: auto;
+			background: none repeat scroll 0px 0px rgb(250, 250, 250);
+			border-right: 1px solid rgba(0, 0, 0, 0.15);
+			color: #444;
 		}
 	</ui:style>
 
-	<g:HTMLPanel styleName="side-pane">
-<!-- 		<g:HTMLPanel styleName="{style.sidebar-pane-controls}"> -->
-<!-- 			<g:HTMLPanel ui:field="closeButton" styleName="{style.close}">x</g:HTMLPanel> -->
-<!-- 		</g:HTMLPanel> -->
+	<g:HTMLPanel styleName="{style.side-pane}">
 		<g:HTMLPanel ui:field="contentPanel">
 		</g:HTMLPanel>
 	</g:HTMLPanel>

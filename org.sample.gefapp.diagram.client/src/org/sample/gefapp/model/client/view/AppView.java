@@ -18,8 +18,6 @@ public  class AppView extends Composite implements AppController.View {
 	
 	private static Binder uiBinder = GWT.create(Binder.class);
 	
-//	@UiField SidebarView sideBarPanel;
-	
 	@UiField DiagramView diagramPanel;
 	
 	@UiField DiagramControlView controlPanel;
@@ -32,11 +30,6 @@ public  class AppView extends Composite implements AppController.View {
 	public DiagramView getDiagramView() {
 		return diagramPanel;
 	}
-	
-//	@Override
-//	public SidebarView getSidebarView() {
-//		return sideBarPanel;
-//	}
 
 	public ControlView getControlView() {
 		return controlPanel;

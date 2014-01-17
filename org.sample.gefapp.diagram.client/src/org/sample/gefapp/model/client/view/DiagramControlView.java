@@ -20,7 +20,7 @@ public  class DiagramControlView extends Composite implements AppController.Cont
 	
 	private static Binder uiBinder = GWT.create(Binder.class);
 	
-	@UiField HTMLPanel menuButton;
+//	@UiField HTMLPanel menuButton;
 	@UiField HTMLPanel paletteButton;
 	@UiField HTMLPanel propertyButton;
 

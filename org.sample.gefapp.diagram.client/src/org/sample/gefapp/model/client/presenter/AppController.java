@@ -64,9 +64,6 @@ public  class AppController implements Presenter, ValueChangeHandler<String> {
 	private final ControlViewHandler handler = new ControlViewHandler() {
 		@Override
 		public void onClickCreate() {
-//			if (Window.confirm("Do you want to create a new diagram?")) {
-//				
-//			}
 		}
 		@Override
 		public void onClickPalette() {
@@ -127,6 +124,7 @@ public  class AppController implements Presenter, ValueChangeHandler<String> {
 	private DiagramPresenter diagramPresenter;
 	
 	private Panes currentPane;
+
 	private SidePaneView currentPaneView;
 
 	public AppController(HandlerManager eventBus, ClientFactory clientFactory, View view) {
@@ -141,12 +139,6 @@ public  class AppController implements Presenter, ValueChangeHandler<String> {
 	private void bind() {
 		History.addValueChangeHandler(this);
 
-//		eventBus.addHandler(OpenDiagramEvent.TYPE, new OpenDiagramEventHandler() {
-//			@Override
-//			public void onOpen(OpenDiagramEvent event) {
-//				createDiagram(event.resource);
-//			}
-//		});
 		eventBus.addHandler(ShowPaneEvent.TYPE, new ShowPaneEvent.ShowPaneEventHandler() {
 			@Override
 			public void show(ShowPaneEvent event) {

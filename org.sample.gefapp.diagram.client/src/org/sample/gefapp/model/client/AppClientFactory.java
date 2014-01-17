@@ -24,21 +24,15 @@ public class AppClientFactory extends DefaultClientFactory {
 		return factory;
 	}
 
-	/**
-	 * @generated
-	 */
 	@Override
-	public ResourceSet getResourceSet() {
-		ResourceSet rs = super.getResourceSet();
-		rs.getResourceFactoryRegistry().getExtensionToFactoryMap().clear();
-		rs.getResourceFactoryRegistry().getExtensionToFactoryMap().put("*", new ResourceFactoryImpl() {
+	public void setupResourceSet(ResourceSet resourceSet) {
+		resourceSet.getResourceFactoryRegistry().getExtensionToFactoryMap().put("*", new ResourceFactoryImpl() {
 			@Override
 			public Resource createResource(URI uri) {
 				return new JsResourceImpl(uri);
 			}
 		});
-		rs.getURIConverter().getURIHandlers().add(0, new LocalStorageHandler());
-		return rs;
+		resourceSet.getURIConverter().getURIHandlers().add(0, new LocalStorageHandler());
 	}
 
 }
