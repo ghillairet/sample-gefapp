@@ -20,12 +20,20 @@ import org.eclipse.gmf.runtime.gwt.requests.CreateRequestEx;
 import org.eclipse.gmf.runtime.gwt.requests.ModelCreationFactory;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.Node;
+import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.swt.graphics.Image;
 import org.sample.gefapp.entities.diagram.edit.parts.DomainModelEditPart;
+import org.sample.gefapp.entities.provider.EntitiesEditPluginImages;
+
+import com.google.gwt.core.client.GWT;
 
 /**
  * @generated
  */
 public class EntitiesPaletteFactory {
+	
+	private final EntitiesEditPluginImages IMAGES = GWT.create(EntitiesEditPluginImages.class);
+
 	/**
 	 * @generated
 	 */
@@ -72,8 +80,8 @@ public class EntitiesPaletteFactory {
 	 */
 	private ToolEntry createEntity1CreationTool() {
 		final int[] visualIds = new int[]{2001};
-		NodeToolEntry entry = new NodeToolEntry("Entity", "Create new Entity",
-				visualIds);
+		NodeToolEntry entry = new NodeToolEntry("Entity", "Create new Entity",visualIds);
+		entry.setSmallIcon(ImageDescriptor.createFromImage(new Image(null, IMAGES.entity())));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -82,8 +90,7 @@ public class EntitiesPaletteFactory {
 	 */
 	private ToolEntry createSuperType2CreationTool() {
 		final int[] visualIds = new int[]{4001};
-		LinkToolEntry entry = new LinkToolEntry("superType",
-				"Create new superTypeConnection", visualIds);
+		LinkToolEntry entry = new LinkToolEntry("superType", "Create new superTypeConnection", visualIds);
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
@@ -92,8 +99,8 @@ public class EntitiesPaletteFactory {
 	 */
 	private ToolEntry createFeature3CreationTool() {
 		final int[] visualIds = new int[]{3001};
-		NodeToolEntry entry = new NodeToolEntry("Feature",
-				"Create new Feature", visualIds);
+		NodeToolEntry entry = new NodeToolEntry("Feature", "Create new Feature", visualIds);
+		entry.setSmallIcon(ImageDescriptor.createFromImage(new Image(null, IMAGES.feature())));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
