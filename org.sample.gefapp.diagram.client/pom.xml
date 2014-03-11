@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
@@ -12,9 +13,9 @@
 	<packaging>war</packaging>
 
 	<properties>
-        <gwt.module>org.sample.gefapp.model.EntitiesApp</gwt.module>
-        <gwt.style>OBF</gwt.style>
-        <gwt.log>INFO</gwt.log>
+		<gwt.module>org.sample.gefapp.entities.EntitiesApp</gwt.module>
+		<gwt.style>OBF</gwt.style>
+		<gwt.log>INFO</gwt.log>
 	</properties>
 
 	<dependencies>
@@ -66,11 +67,12 @@
 					</execution>
 				</executions>
 
-				<!-- Plugin configuration. There are many available options, see gwt-maven-plugin
+				<!-- Plugin configuration. There are many available options, see gwt-maven-plugin 
 					documentation at codehaus.org -->
 				<configuration>
 					<!-- URL that should be automatically opened in the GWT shell (gwt:run). -->
 					<runTarget>index.html</runTarget>
+<!-- 					<runTarget>http://localhost:8080/</runTarget> -->
 					<!-- Ask GWT to create the Story of Your Compile (SOYC) (gwt:compile) -->
 					<compileReport>true</compileReport>
 					<module>${gwt.module}</module>
@@ -78,6 +80,7 @@
 					<!-- <appEngineHome>${gae.home}</appEngineHome> -->
 					<logLevel>${gwt.log}</logLevel>
 					<style>${gwt.style}</style>
+<!-- 					<noserver>true</noserver> -->
 					<warSourceDirectory>webapp</warSourceDirectory>
 					<extraJvmArgs>-Xss512m -Xmx1024m -XX:MaxPermSize=1024m</extraJvmArgs>
 					<!-- <server>com.google.appengine.tools.development.gwt.AppEngineLauncher</server> -->
@@ -125,5 +128,41 @@
 			</resource>
 		</resources>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<property>
+					<name>dev</name>
+				</property>
+			</activation>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.eclipse.jetty</groupId>
+							<artifactId>jetty-maven-plugin</artifactId>
+							<configuration>
+								<scanIntervalSeconds>1</scanIntervalSeconds>
+								<webApp>
+									<baseResource
+										implementation="org.eclipse.jetty.util.resource.ResourceCollection">
+										<resourcesAsCSV>webapp,${basedir}/../org.sample.gefapp.diagram.client/target/org.sample.gefapp.diagram.client-${project.version}/</resourcesAsCSV>
+									</baseResource>
+								</webApp>
+								<systemProperties>
+									<systemProperty>
+										<name>gwt.codeserver.port</name>
+										<value>9876</value>
+									</systemProperty>
+								</systemProperties>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>
 
 </project>

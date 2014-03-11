@@ -15,6 +15,7 @@ import org.eclipse.gmf.runtime.notation.Edge;
  * @generated
  */
 public class EntitySuperTypeComponentEditPolicy extends ComponentEditPolicyEx {
+
 	/**
 	 * @generated
 	 */
@@ -28,6 +29,7 @@ public class EntitySuperTypeComponentEditPolicy extends ComponentEditPolicyEx {
 				getDiagramEdge().getDiagram(), getDiagramEdge()));
 		return new WrappingCommand(editingDomain, cc);
 	}
+
 	/**
 	 * @generated
 	 */
@@ -43,12 +45,14 @@ public class EntitySuperTypeComponentEditPolicy extends ComponentEditPolicyEx {
 				getDiagramEdge().getDiagram(), getDiagramEdge()));
 		return new WrappingCommand(editingDomain, cc);
 	}
+
 	/**
 	 * @generated
 	 */
 	private boolean canDeleteView() {
 		return false;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -56,6 +60,7 @@ public class EntitySuperTypeComponentEditPolicy extends ComponentEditPolicyEx {
 			EditingDomain editingDomain) {
 		return org.eclipse.emf.common.command.UnexecutableCommand.INSTANCE;
 	}
+
 	/**
 	 * @generated
 	 */

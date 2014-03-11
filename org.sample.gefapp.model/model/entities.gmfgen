@@ -12,7 +12,7 @@
       iconProviderPriority="Low"
       validationProviderPriority="Low">
     <diagramRunTimeClass
-        href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>
+        href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Diagram"/>
     <elementType
         xsi:type="gmfgen:MetamodelType"
         editHelperClassName="DomainModelEditHelper"/>
@@ -25,20 +25,20 @@
         visualID="3001"
         editPartClassName="FeatureEditPart"
         itemSemanticEditPolicyClassName="FeatureItemSemanticEditPolicy"
+        notationViewFactoryClassName="FeatureViewFactory"
         canonicalEditPolicyClassName="FeatureCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="FeatureGraphicalNodeEditPolicy"
         createCommandClassName="FeatureCreateCommand"
         containers="//@diagram/@compartments.0">
       <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+          href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
           editHelperClassName="FeatureEditHelper"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
-          layoutType="TOOLBAR_LAYOUT"
           className="FeatureFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FeatureFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.Label fFigureFeatureNameFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FeatureFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.ToolbarLayout layoutThis = new org.eclipse.draw2d.ToolbarLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(true);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.ToolbarLayout.ALIGN_TOPLEFT&#xA;);&#xA;&#xA;&#x9;layoutThis.setSpacing(5);&#xA;&#x9;layoutThis.setVertical(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(&#xA;8, &#xA;8));&#xA;this.setFillXOR(true);&#xA;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(5, 5, 5, 5));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureFeatureNameFigure = new org.eclipse.draw2d.Label();&#xA;&#xA;fFigureFeatureNameFigure.setText(&quot;&lt;..>&quot;);&#xA;&#xA;fFigureFeatureNameFigure.setFont(FFIGUREFEATURENAMEFIGURE_FONT);&#xA;&#xA;&#xA;&#xA;this.add(fFigureFeatureNameFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.Label getFigureFeatureNameFigure() {&#xA;&#x9;&#x9;return fFigureFeatureNameFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 111, 142, 194);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 242, 245, 252);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font FFIGUREFEATURENAMEFIGURE_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), &quot;Verdana&quot;, 8, org.eclipse.swt.SWT.BOLD);&#xA;&#xA;">
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class FeatureFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.Label fFigureFeatureNameFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public FeatureFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.GridLayout layoutThis = new org.eclipse.draw2d.GridLayout();&#xA;&#x9;layoutThis.numColumns = 1;&#xA;&#x9;layoutThis.makeColumnsEqualWidth = true;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(&#xA;8, &#xA;8));&#xA;this.setFillXOR(true);&#xA;this.setOutline(false);&#xA;this.setLineWidth(0);&#xA;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(5, 5, 5, 5));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureFeatureNameFigure = new org.eclipse.draw2d.Label();&#xA;&#xA;fFigureFeatureNameFigure.setText(&quot;&lt;..>&quot;);&#xA;&#x9;fFigureFeatureNameFigure.setForegroundColor(FFIGUREFEATURENAMEFIGURE_FORE&#xA;);&#xA;&#xA;fFigureFeatureNameFigure.setFont(FFIGUREFEATURENAMEFIGURE_FONT);&#xA;&#xA;&#xA;&#xA;&#xA;org.eclipse.draw2d.GridData constraintFFigureFeatureNameFigure = new org.eclipse.draw2d.GridData();&#xA;constraintFFigureFeatureNameFigure.verticalAlignment = org.eclipse.draw2d.GridData.CENTER;&#xA;constraintFFigureFeatureNameFigure.horizontalAlignment = org.eclipse.draw2d.GridData.BEGINNING;&#xA;constraintFFigureFeatureNameFigure.horizontalIndent = 0;&#xA;constraintFFigureFeatureNameFigure.horizontalSpan = 1;&#xA;constraintFFigureFeatureNameFigure.verticalSpan = 1;&#xA;constraintFFigureFeatureNameFigure.grabExcessHorizontalSpace = false;&#xA;constraintFFigureFeatureNameFigure.grabExcessVerticalSpace = true;&#xA;this.add(fFigureFeatureNameFigure, constraintFFigureFeatureNameFigure);&#xA;&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.Label getFigureFeatureNameFigure() {&#xA;&#x9;&#x9;return fFigureFeatureNameFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 255, 250, 230);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 255, 250, 230);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color FFIGUREFEATURENAMEFIGURE_FORE = new org.eclipse.swt.graphics.Color(null, 0, 0, 0);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font FFIGUREFEATURENAMEFIGURE_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), &quot;Verdana&quot;, 11, org.eclipse.swt.SWT.NORMAL);&#xA;&#xA;">
         <attributes
             xsi:type="gmfgen:StyleAttributes"
             fixedForeground="true"
@@ -56,16 +56,18 @@
           visualID="5002"
           editPartClassName="FeatureNameEditPart"
           itemSemanticEditPolicyClassName="FeatureNameItemSemanticEditPolicy"
+          notationViewFactoryClassName="FeatureNameViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureFeatureNameFigure"
             figureQualifiedClassName="org.eclipse.draw2d.Label">
           <attributes
               xsi:type="gmfgen:StyleAttributes"
-              fixedFont="true"/>
+              fixedFont="true"
+              fixedForeground="true"/>
         </viewmap>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
@@ -85,7 +87,7 @@
         graphicalNodeEditPolicyClassName="EntityGraphicalNodeEditPolicy"
         createCommandClassName="EntityCreateCommand">
       <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+          href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <elementType
           xsi:type="gmfgen:MetamodelType"
           editHelperClassName="EntityEditHelper"/>
@@ -93,7 +95,7 @@
           xsi:type="gmfgen:InnerClassViewmap"
           layoutType="TOOLBAR_LAYOUT"
           className="EntityFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class EntityFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.Label fFigureEntityNameFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fFigurefeaturesCompartmentFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public EntityFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.ToolbarLayout layoutThis = new org.eclipse.draw2d.ToolbarLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(true);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.ToolbarLayout.ALIGN_TOPLEFT&#xA;);&#xA;&#xA;&#x9;layoutThis.setSpacing(5);&#xA;&#x9;layoutThis.setVertical(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(&#xA;6, &#xA;6));&#xA;this.setLineWidth(3);&#xA;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;this.setMinimumSize(new org.eclipse.draw2d.geometry.Dimension(160, 150));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(5, 3, 3, 3));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureEntityNameFigure = new org.eclipse.draw2d.Label();&#xA;&#xA;fFigureEntityNameFigure.setText(&quot;&lt;..>&quot;);&#xA;&#xA;fFigureEntityNameFigure.setFont(FFIGUREENTITYNAMEFIGURE_FONT);&#xA;&#xA;&#xA;&#xA;this.add(fFigureEntityNameFigure);&#xA;&#xA;&#xA;&#xA;fFigurefeaturesCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;&#x9;fFigurefeaturesCompartmentFigure.setForegroundColor(FFIGUREFEATURESCOMPARTMENTFIGURE_FORE&#xA;);&#xA;&#x9;fFigurefeaturesCompartmentFigure.setBackgroundColor(FFIGUREFEATURESCOMPARTMENTFIGURE_BACK&#xA;);&#xA;fFigurefeaturesCompartmentFigure.setMinimumSize(new org.eclipse.draw2d.geometry.Dimension(160, 150));&#xA;&#xA;fFigurefeaturesCompartmentFigure.setBorder(new org.eclipse.draw2d.MarginBorder(5, 5, 5, 5));&#xA;&#xA;this.add(fFigurefeaturesCompartmentFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.Label getFigureEntityNameFigure() {&#xA;&#x9;&#x9;return fFigureEntityNameFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getFigurefeaturesCompartmentFigure() {&#xA;&#x9;&#x9;return fFigurefeaturesCompartmentFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 111, 142, 194);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 242, 245, 252);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font FFIGUREENTITYNAMEFIGURE_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), &quot;Verdana&quot;, 9, org.eclipse.swt.SWT.BOLD);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color FFIGUREFEATURESCOMPARTMENTFIGURE_FORE = new org.eclipse.swt.graphics.Color(null, 133, 156, 194);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color FFIGUREFEATURESCOMPARTMENTFIGURE_BACK = new org.eclipse.swt.graphics.Color(null, 251, 252, 255);&#xA;&#xA;">
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class EntityFigure extends org.eclipse.draw2d.RoundedRectangle {&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.Label fFigureEntityNameFigure; &#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RectangleFigure fFigurefeaturesCompartmentFigure; &#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public EntityFigure() {&#xA;&#x9;&#x9;&#xA;&#x9;org.eclipse.draw2d.ToolbarLayout layoutThis = new org.eclipse.draw2d.ToolbarLayout();&#xA;&#x9;layoutThis.setStretchMinorAxis(true);&#xA;&#x9;layoutThis.setMinorAlignment(org.eclipse.draw2d.ToolbarLayout.ALIGN_TOPLEFT&#xA;);&#xA;&#xA;&#x9;layoutThis.setSpacing(5);&#xA;&#x9;layoutThis.setVertical(true);&#xA;&#xA;&#x9;this.setLayoutManager(layoutThis);&#xA;&#xA;&#x9;&#x9;this.setCornerDimensions(new org.eclipse.draw2d.geometry.Dimension(&#xA;6, &#xA;6));&#xA;this.setLineWidth(2);&#xA;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#x9;this.setBackgroundColor(THIS_BACK&#xA;);&#xA;this.setMinimumSize(new org.eclipse.draw2d.geometry.Dimension(200, 150));&#xA;&#xA;this.setBorder(new org.eclipse.draw2d.MarginBorder(5, 3, 3, 3));&#xA;&#x9;&#x9;createContents();&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private void createContents(){&#xA;&#xA;&#xA;fFigureEntityNameFigure = new org.eclipse.draw2d.Label();&#xA;&#xA;fFigureEntityNameFigure.setText(&quot;&lt;..>&quot;);&#xA;&#x9;fFigureEntityNameFigure.setForegroundColor(FFIGUREENTITYNAMEFIGURE_FORE&#xA;);&#xA;&#xA;fFigureEntityNameFigure.setFont(FFIGUREENTITYNAMEFIGURE_FONT);&#xA;&#xA;&#xA;&#xA;this.add(fFigureEntityNameFigure);&#xA;&#xA;&#xA;&#xA;fFigurefeaturesCompartmentFigure = new org.eclipse.draw2d.RectangleFigure();&#xA;&#xA;fFigurefeaturesCompartmentFigure.setOutline(false);&#xA;&#x9;fFigurefeaturesCompartmentFigure.setForegroundColor(FFIGUREFEATURESCOMPARTMENTFIGURE_FORE&#xA;);&#xA;&#x9;fFigurefeaturesCompartmentFigure.setBackgroundColor(FFIGUREFEATURESCOMPARTMENTFIGURE_BACK&#xA;);&#xA;fFigurefeaturesCompartmentFigure.setMinimumSize(new org.eclipse.draw2d.geometry.Dimension(200, 150));&#xA;&#xA;fFigurefeaturesCompartmentFigure.setBorder(new org.eclipse.draw2d.MarginBorder(5, 5, 5, 5));&#xA;&#xA;this.add(fFigurefeaturesCompartmentFigure);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.Label getFigureEntityNameFigure() {&#xA;&#x9;&#x9;return fFigureEntityNameFigure;&#xA;&#x9;}&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public org.eclipse.draw2d.RectangleFigure getFigurefeaturesCompartmentFigure() {&#xA;&#x9;&#x9;return fFigurefeaturesCompartmentFigure;&#xA;&#x9;}&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 0, 0, 0);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_BACK = new org.eclipse.swt.graphics.Color(null, 255, 250, 230);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color FFIGUREENTITYNAMEFIGURE_FORE = new org.eclipse.swt.graphics.Color(null, 0, 0, 0);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font FFIGUREENTITYNAMEFIGURE_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), &quot;Verdana&quot;, 14, org.eclipse.swt.SWT.NORMAL);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color FFIGUREFEATURESCOMPARTMENTFIGURE_FORE = new org.eclipse.swt.graphics.Color(null, 100, 100, 100);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color FFIGUREFEATURESCOMPARTMENTFIGURE_BACK = new org.eclipse.swt.graphics.Color(null, 255, 250, 230);&#xA;&#xA;">
         <attributes
             xsi:type="gmfgen:StyleAttributes"
             fixedForeground="true"
@@ -114,14 +116,15 @@
           notationViewFactoryClassName="EntityNameViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:ParentAssignedViewmap"
             getterName="getFigureEntityNameFigure"
             figureQualifiedClassName="org.eclipse.draw2d.Label">
           <attributes
               xsi:type="gmfgen:StyleAttributes"
-              fixedFont="true"/>
+              fixedFont="true"
+              fixedForeground="true"/>
         </viewmap>
         <modelFacet
             xsi:type="gmfgen:FeatureLabelModelFacet"
@@ -135,16 +138,17 @@
         visualID="4001"
         editPartClassName="EntitySuperTypeEditPart"
         itemSemanticEditPolicyClassName="EntitySuperTypeItemSemanticEditPolicy"
+        notationViewFactoryClassName="EntitySuperTypeViewFactory"
         createCommandClassName="EntitySuperTypeCreateCommand"
         reorientCommandClassName="EntitySuperTypeReorientCommand">
       <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
+          href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Edge"/>
       <elementType
           xsi:type="gmfgen:SpecializationType"/>
       <viewmap
           xsi:type="gmfgen:InnerClassViewmap"
           className="SuperTypeConnectionFigure"
-          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class SuperTypeConnectionFigure extends org.eclipse.draw2d.PolylineConnection {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public SuperTypeConnectionFigure() {&#xA;&#x9;&#x9;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolygonDecoration df = new org.eclipse.draw2d.PolygonDecoration();&#xA;df.setFill(true);&#xA;&#x9;df.setForegroundColor(DF_FORE&#xA;);&#xA;org.eclipse.draw2d.geometry.PointList pl = new org.eclipse.draw2d.geometry.PointList();&#xA;pl.addPoint(-1, 1);&#xA;pl.addPoint(-1, -1);&#xA;pl.addPoint(0, 0);&#xA;df.setTemplate(pl);&#xA;df.setScale(&#xA;7, &#xA;3);&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 32, 104, 160);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color DF_FORE = new org.eclipse.swt.graphics.Color(null, 32, 104, 160);&#xA;&#xA;">
+          classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class SuperTypeConnectionFigure extends org.eclipse.draw2d.PolylineConnection {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public SuperTypeConnectionFigure() {&#xA;&#x9;&#x9;&#x9;this.setForegroundColor(THIS_FORE&#xA;);&#xA;&#xA;&#x9;&#x9;setTargetDecoration(createTargetDecoration());&#xA;&#x9;}&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;private org.eclipse.draw2d.RotatableDecoration createTargetDecoration() {&#xA;&#x9;&#x9;org.eclipse.draw2d.PolygonDecoration df = new org.eclipse.draw2d.PolygonDecoration();&#xA;df.setFill(true);&#xA;df.setLineWidth(2);&#xA;&#x9;df.setForegroundColor(DF_FORE&#xA;);&#xA;org.eclipse.draw2d.geometry.PointList pl = new org.eclipse.draw2d.geometry.PointList();&#xA;pl.addPoint(-1, 1);&#xA;pl.addPoint(-1, -1);&#xA;pl.addPoint(0, 0);&#xA;df.setTemplate(pl);&#xA;df.setScale(&#xA;7, &#xA;3);&#xA;&#x9;&#x9;return df;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color THIS_FORE = new org.eclipse.swt.graphics.Color(null, 0, 0, 0);&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Color DF_FORE = new org.eclipse.swt.graphics.Color(null, 0, 0, 0);&#xA;&#xA;">
         <attributes
             xsi:type="gmfgen:StyleAttributes"
             fixedForeground="true"/>
@@ -158,13 +162,14 @@
           visualID="6001"
           editPartClassName="SuperTypeConnectionLabelEditPart"
           itemSemanticEditPolicyClassName="SuperTypeConnectionLabelItemSemanticEditPolicy"
+          notationViewFactoryClassName="EntitySuperTypeLabelViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
-            href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+            href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
             xsi:type="gmfgen:InnerClassViewmap"
             className="SuperTypeConnectionLabelFigure"
-            classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class SuperTypeConnectionLabelFigure extends org.eclipse.draw2d.Label {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public SuperTypeConnectionLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;supertype&quot;);&#xA;&#xA;this.setFont(THIS_FONT);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font THIS_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), &quot;Verdana&quot;, 9, org.eclipse.swt.SWT.BOLD);&#xA;&#xA;">
+            classBody="&#xA;/**&#xA; * @generated&#xA; */&#xA;public class SuperTypeConnectionLabelFigure extends org.eclipse.draw2d.Label {&#xA;&#xA;&#xA;&#xA;&#xA;&#x9;/**&#xA;&#x9; * @generated&#xA;&#x9; */&#xA;&#x9;public SuperTypeConnectionLabelFigure() {&#xA;&#x9;&#x9;&#x9;&#x9;this.setText(&quot;supertype&quot;);&#xA;&#xA;this.setFont(THIS_FONT);&#xA;&#xA;&#xA;&#x9;}&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;}&#xA;&#xA;/**&#xA; * @generated&#xA; */&#xA;static final org.eclipse.swt.graphics.Font THIS_FONT = new org.eclipse.swt.graphics.Font(org.eclipse.swt.widgets.Display.getCurrent(), &quot;Verdana&quot;, 12, org.eclipse.swt.SWT.NORMAL);&#xA;&#xA;">
           <attributes
               xsi:type="gmfgen:StyleAttributes"
               fixedFont="true"/>
@@ -180,13 +185,14 @@
         visualID="7001"
         editPartClassName="EntityFeaturesEditPart"
         itemSemanticEditPolicyClassName="EntityFeaturesItemSemanticEditPolicy"
+        notationViewFactoryClassName="EntityFeaturesViewFactory"
         canonicalEditPolicyClassName="EntityFeaturesCanonicalEditPolicy"
         childNodes="//@diagram/@childNodes.0"
         title="features"
         needsTitle="false"
         node="//@diagram/@topLevelNodes.0">
       <diagramRunTimeClass
-          href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
+          href="../../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
       <viewmap
           xsi:type="gmfgen:ParentAssignedViewmap"
           getterName="getFigurefeaturesCompartmentFigure"

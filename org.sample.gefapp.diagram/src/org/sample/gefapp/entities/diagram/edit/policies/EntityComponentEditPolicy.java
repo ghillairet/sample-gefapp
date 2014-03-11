@@ -26,6 +26,7 @@ import org.sample.gefapp.entities.diagram.part.EntitiesVisualIDRegistry;
  * @generated
  */
 public class EntityComponentEditPolicy extends ComponentEditPolicyEx {
+
 	/**
 	 * @generated
 	 */
@@ -115,12 +116,14 @@ public class EntityComponentEditPolicy extends ComponentEditPolicyEx {
 		}
 		return false;
 	}
+
 	/**
 	 * @generated
 	 */
 	protected GraphicalEditPart getGraphicalEditPart() {
 		return (GraphicalEditPart) getHost();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -129,6 +132,7 @@ public class EntityComponentEditPolicy extends ComponentEditPolicyEx {
 		return DestroyElementCommand.create(editingDomain, getDiagramNode()
 				.getElement());
 	}
+
 	/**
 	 * @generated
 	 */

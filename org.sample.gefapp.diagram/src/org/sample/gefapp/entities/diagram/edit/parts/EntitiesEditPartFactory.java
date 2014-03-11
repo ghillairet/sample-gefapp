@@ -11,20 +11,24 @@ import org.sample.gefapp.entities.diagram.part.EntitiesVisualIDRegistry;
  * @generated
  */
 public class EntitiesEditPartFactory implements EditPartFactory {
+
 	/**
 	 * @generated
 	 */
 	public static final String EXTERNAL_NODE_LABELS_LAYER = "External Node Labels";
+
 	/**
 	 * @generated
 	 */
 	private final ClientFactory clientFactory;
+
 	/**
 	 * @generated
 	 */
 	public EntitiesEditPartFactory(ClientFactory clientFactory) {
 		this.clientFactory = clientFactory;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -59,6 +63,7 @@ public class EntitiesEditPartFactory implements EditPartFactory {
 		}
 		return createUnrecognizedEditPart(context, model);
 	}
+
 	/**
 	 * @generated
 	 */

@@ -15,10 +15,12 @@ import org.sample.gefapp.entities.diagram.part.EntitiesVisualIDRegistry;
  * @generated
  */
 public class EntityViewFactory implements IViewDecorator {
+
 	/**
 	 * @generated
 	 */
 	public static EntityViewFactory INSTANCE = new EntityViewFactory();
+
 	/**
 	 * @generated
 	 */
@@ -42,6 +44,7 @@ public class EntityViewFactory implements IViewDecorator {
 		create5001Label(view);
 		create7001Compartment(view);
 	}
+
 	/**
 	 * @generated
 	 */
@@ -50,6 +53,7 @@ public class EntityViewFactory implements IViewDecorator {
 		view.getPersistedChildren().add(label);
 		EntityNameViewFactory.INSTANCE.decorateView(label);
 	}
+
 	/**
 	 * @generated
 	 */

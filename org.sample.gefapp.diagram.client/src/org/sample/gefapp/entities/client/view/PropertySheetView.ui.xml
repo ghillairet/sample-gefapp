@@ -1,0 +1,25 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+			xmlns:g="urn:import:com.google.gwt.user.client.ui">
+
+	<ui:with field='res' type='org.sample.gefapp.entities.client.icons.Icons' />
+
+	<ui:style>
+		.diagram-property {
+			position: absolute;
+			top: 40px;
+			left: 10px;
+		}
+		.nav-box {
+			color: rgb(0, 0, 0);
+			display: -moz-box;
+			-moz-box-orient: vertical;
+			-moz-box-align: stretch;
+		}
+	</ui:style>
+
+	<g:HTMLPanel styleName="{style.diagram-property}">
+		<g:HTMLPanel ui:field="panel" styleName="{style.nav-box}"></g:HTMLPanel>
+	</g:HTMLPanel>
+
+</ui:UiBinder>

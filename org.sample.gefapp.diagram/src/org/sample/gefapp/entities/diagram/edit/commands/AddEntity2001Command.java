@@ -26,6 +26,7 @@ import org.sample.gefapp.entities.diagram.view.factories.EntityViewFactory;
  * @generated
  */
 public class AddEntity2001Command extends CommandWrapper {
+
 	/**
 	 * @generated
 	 */
@@ -50,6 +51,7 @@ public class AddEntity2001Command extends CommandWrapper {
 	 * @generated
 	 */
 	private final Rectangle constraint;
+
 	/**
 	 * @generated
 	 */
@@ -61,6 +63,7 @@ public class AddEntity2001Command extends CommandWrapper {
 		this.newVisualID = newVisualID;
 		this.constraint = constraint;
 	}
+
 	/**
 	 * @generated
 	 */

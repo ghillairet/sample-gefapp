@@ -11,10 +11,12 @@ import org.sample.gefapp.entities.diagram.edit.parts.DomainModelEditPart;
  * @generated
  */
 public class DomainModelViewFactory implements IViewDecorator {
+
 	/**
 	 * @generated
 	 */
 	public static DomainModelViewFactory INSTANCE = new DomainModelViewFactory();
+
 	/**
 	 * @generated
 	 */

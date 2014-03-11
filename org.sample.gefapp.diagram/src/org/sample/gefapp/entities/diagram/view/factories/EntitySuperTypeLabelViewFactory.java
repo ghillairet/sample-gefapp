@@ -13,10 +13,12 @@ import org.sample.gefapp.entities.diagram.part.EntitiesVisualIDRegistry;
  * @generated
  */
 public class EntitySuperTypeLabelViewFactory implements IViewDecorator {
+
 	/**
 	 * @generated
 	 */
 	public static EntitySuperTypeLabelViewFactory INSTANCE = new EntitySuperTypeLabelViewFactory();
+
 	/**
 	 * @generated
 	 */

@@ -15,10 +15,12 @@ import org.sample.gefapp.entities.diagram.part.EntitiesVisualIDRegistry;
  * @generated
  */
 public class FeatureViewFactory implements IViewDecorator {
+
 	/**
 	 * @generated
 	 */
 	public static FeatureViewFactory INSTANCE = new FeatureViewFactory();
+
 	/**
 	 * @generated
 	 */
@@ -42,6 +44,7 @@ public class FeatureViewFactory implements IViewDecorator {
 		view.getStyles().add(fontStyle);
 		create5002Label(view);
 	}
+
 	/**
 	 * @generated
 	 */

@@ -9,10 +9,12 @@ import org.eclipse.gmf.runtime.notation.View;
 import org.sample.gefapp.entities.diagram.edit.parts.SuperTypeConnectionLabelEditPart;
 import org.sample.gefapp.entities.diagram.part.EntitiesVisualIDRegistry;
 
+
 /**
  * @generated
  */
 public class EntitySuperTypeEndpointEditPolicy extends ConnectionEndpointEditPolicy {
+	
 	/**
 	 * @generated
 	 */

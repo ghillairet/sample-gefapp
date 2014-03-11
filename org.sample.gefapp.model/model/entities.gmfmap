@@ -66,6 +66,20 @@
         xsi:type="ecore:EReference"
         href="entities.ecore#//Entity/superType"/>
   </links>
+  <links>
+    <domainMetaElement
+        href="entities.ecore#//Feature"/>
+    <containmentFeature
+        href="entities.ecore#//Entity/features"/>
+    <tool
+        xsi:type="gmftool:CreationTool"
+        href="entities.gmftool#//@tools.3"/>
+    <diagramLink
+        href="entities.gmfgraph#features"/>
+    <linkMetaFeature
+        xsi:type="ecore:EReference"
+        href="entities.ecore#//Feature/type"/>
+  </links>
   <diagram>
     <diagramCanvas
         href="entities.gmfgraph#ui"/>

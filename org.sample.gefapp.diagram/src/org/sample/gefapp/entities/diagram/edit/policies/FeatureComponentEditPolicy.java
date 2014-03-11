@@ -19,6 +19,7 @@ import org.eclipse.gmf.runtime.notation.View;
  * @generated
  */
 public class FeatureComponentEditPolicy extends ComponentEditPolicyEx {
+
 	/**
 	 * @generated
 	 */
@@ -32,6 +33,7 @@ public class FeatureComponentEditPolicy extends ComponentEditPolicyEx {
 				.eContainer(), getDiagramNode()));
 		return new WrappingCommand(editingDomain, cc);
 	}
+
 	/**
 	 * @generated
 	 */
@@ -47,6 +49,7 @@ public class FeatureComponentEditPolicy extends ComponentEditPolicyEx {
 				.eContainer(), getDiagramNode()));
 		return new WrappingCommand(editingDomain, cc);
 	}
+
 	/**
 	 * @generated
 	 */
@@ -65,6 +68,7 @@ public class FeatureComponentEditPolicy extends ComponentEditPolicyEx {
 		}
 		return false;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -73,6 +77,7 @@ public class FeatureComponentEditPolicy extends ComponentEditPolicyEx {
 		return DestroyElementCommand.create(editingDomain, getDiagramNode()
 				.getElement());
 	}
+
 	/**
 	 * @generated
 	 */

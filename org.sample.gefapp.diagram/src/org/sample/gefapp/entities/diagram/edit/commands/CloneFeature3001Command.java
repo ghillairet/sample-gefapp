@@ -22,6 +22,7 @@ import org.sample.gefapp.entities.diagram.view.factories.FeatureViewFactory;
  * @generated
  */
 public class CloneFeature3001Command extends CommandWrapper {
+
 	/**
 	 * @generated
 	 */
@@ -46,6 +47,7 @@ public class CloneFeature3001Command extends CommandWrapper {
 	 * @generated
 	 */
 	private Command afterCopyCommand;
+
 	/**
 	 * @generated
 	 */
@@ -57,6 +59,7 @@ public class CloneFeature3001Command extends CommandWrapper {
 		this.editingDomain = AdapterFactoryEditingDomain
 				.getEditingDomainFor(childNode.getDiagram().getElement());
 	}
+
 	/**
 	 * @generated
 	 */
@@ -66,6 +69,7 @@ public class CloneFeature3001Command extends CommandWrapper {
 		//Otherwise, we would have to execute the CopyCommand on every mouse move, which could be much too expensive.
 		return CopyCommand.create(editingDomain, element);
 	}
+
 	/**
 	 * @generated
 	 */
@@ -100,6 +104,7 @@ public class CloneFeature3001Command extends CommandWrapper {
 		return super.canUndo() && afterCopyCommand != null
 				&& afterCopyCommand.canUndo();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -107,6 +112,7 @@ public class CloneFeature3001Command extends CommandWrapper {
 		afterCopyCommand.undo();
 		super.undo();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -114,6 +120,7 @@ public class CloneFeature3001Command extends CommandWrapper {
 		super.redo();
 		afterCopyCommand.redo();
 	}
+
 	/**
 	 * @generated
 	 */

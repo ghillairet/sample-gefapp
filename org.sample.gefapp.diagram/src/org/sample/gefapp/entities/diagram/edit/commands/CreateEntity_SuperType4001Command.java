@@ -16,6 +16,7 @@ import org.sample.gefapp.entities.diagram.view.factories.EntitySuperTypeViewFact
  * @generated
  */
 public class CreateEntity_SuperType4001Command extends AbstractCommand {
+
 	/**
 	 * @generated
 	 */
@@ -35,6 +36,7 @@ public class CreateEntity_SuperType4001Command extends AbstractCommand {
 	 * @generated
 	 */
 	private Command domainModelAddCommand;
+
 	/**
 	 * @generated
 	 */
@@ -57,6 +59,7 @@ public class CreateEntity_SuperType4001Command extends AbstractCommand {
 		createdEdge.setElement(null);
 		EntitySuperTypeViewFactory.INSTANCE.decorateView(createdEdge);
 	}
+
 	/**
 	 * @generated
 	 */
@@ -71,6 +74,7 @@ public class CreateEntity_SuperType4001Command extends AbstractCommand {
 		}
 		return true;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -81,6 +85,7 @@ public class CreateEntity_SuperType4001Command extends AbstractCommand {
 				EntitiesPackage.eINSTANCE.getEntity_SuperType(),
 				target.getElement());
 	}
+
 	/**
 	 * @generated
 	 */
@@ -89,6 +94,7 @@ public class CreateEntity_SuperType4001Command extends AbstractCommand {
 				&& domainModelAddCommand != null
 				&& domainModelAddCommand.canUndo();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -98,6 +104,7 @@ public class CreateEntity_SuperType4001Command extends AbstractCommand {
 		createdEdge.setSource(source);
 		createdEdge.setTarget(target);
 	}
+
 	/**
 	 * @generated
 	 */
@@ -107,6 +114,7 @@ public class CreateEntity_SuperType4001Command extends AbstractCommand {
 		createdEdge.setSource(null);
 		createdEdge.setTarget(null);
 	}
+
 	/**
 	 * @generated
 	 */

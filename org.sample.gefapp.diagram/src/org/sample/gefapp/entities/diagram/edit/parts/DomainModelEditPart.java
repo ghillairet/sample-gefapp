@@ -18,23 +18,28 @@ import org.eclipse.jface.viewers.StructuredSelection;
 import org.eclipse.swt.graphics.Color;
 import org.sample.gefapp.entities.diagram.edit.policies.DomainModelLayoutEditPolicy;
 
+
 /**
  * @generated
  */
 public class DomainModelEditPart extends BaseDiagramEditPart {
 
+	
 	/**
 	 * @generated
 	 */
 	public static String MODEL_ID = "Entities";
+	
 	/**
 	 * @generated
 	 */
 	public static final int VISUAL_ID = 1000;
+	
 	/**
 	 * @generated
 	 */
 	private final ClientFactory clientFactory;
+	
 	/**
 	 * @generated
 	 */
@@ -42,12 +47,14 @@ public class DomainModelEditPart extends BaseDiagramEditPart {
 		setModel(model);
 		this.clientFactory = clientFactory;
 	}
+	
 	/**
 	 * @generated
 	 */
 	public Diagram getDiagram() {
 		return (Diagram) getModel();
 	}
+	
 	/**
 	 * @generated
 	 */
@@ -55,6 +62,7 @@ public class DomainModelEditPart extends BaseDiagramEditPart {
 		installEditPolicy(EditPolicy.COMPONENT_ROLE, new RootComponentEditPolicy());
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, new DomainModelLayoutEditPolicy());
 	}
+	
 	/**
 	 * @generated
 	 */
@@ -66,6 +74,7 @@ public class DomainModelEditPart extends BaseDiagramEditPart {
 		f.setLayoutManager(new FreeformLayout());
 		return f;
 	}
+	
 	/**
 	 * @generated
 	 */
@@ -81,6 +90,7 @@ public class DomainModelEditPart extends BaseDiagramEditPart {
 			}
 		};
 	}
+	
 	/**
 	 * @generated
 	 */
@@ -91,12 +101,14 @@ public class DomainModelEditPart extends BaseDiagramEditPart {
 		}
 		return super.getAdapter(key);
 	}
+	
 	/**
 	 * @generated
 	 */
 	public void activate() {
 		super.activate();
 	}
+	
 	/**
 	 * @generated
 	 */

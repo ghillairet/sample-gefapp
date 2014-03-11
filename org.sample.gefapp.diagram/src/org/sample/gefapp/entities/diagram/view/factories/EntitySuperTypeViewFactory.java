@@ -16,10 +16,12 @@ import org.sample.gefapp.entities.diagram.part.EntitiesVisualIDRegistry;
  * @generated
  */
 public class EntitySuperTypeViewFactory implements IViewDecorator {
+
 	/**
 	 * @generated
 	 */
 	public static EntitySuperTypeViewFactory INSTANCE = new EntitySuperTypeViewFactory();
+
 	/**
 	 * @generated
 	 */
@@ -49,6 +51,7 @@ public class EntitySuperTypeViewFactory implements IViewDecorator {
 		view.getStyles().add(fillStyle);
 		create6001Label(view);
 	}
+
 	/**
 	 * @generated
 	 */

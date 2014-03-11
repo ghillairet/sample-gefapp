@@ -15,6 +15,7 @@ import org.eclipse.gmf.runtime.gwt.requests.CreateConnectionRequestEx;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.sample.gefapp.entities.diagram.edit.commands.CreateEntity_SuperType4001Command;
+import org.sample.gefapp.entities.diagram.edit.commands.CreateEntity_SuperType4001StartCommand;
 import org.sample.gefapp.entities.diagram.edit.commands.Entity_SuperType4001StartCommand;
 import org.sample.gefapp.entities.diagram.edit.commands.ReconnectEntity_SuperType4001SourceCommand;
 import org.sample.gefapp.entities.diagram.edit.commands.ReconnectEntity_SuperType4001TargetCommand;
@@ -26,6 +27,7 @@ import org.sample.gefapp.entities.diagram.part.EntitiesVisualIDRegistry;
  * @generated
  */
 public class EntityGraphicalNodeEditPolicy extends GraphicalNodeEditPolicy {
+
 	/**
 	 * @generated
 	 */
@@ -42,7 +44,7 @@ public class EntityGraphicalNodeEditPolicy extends GraphicalNodeEditPolicy {
 				int nextVisualId = visualIds[i];
 				switch (nextVisualId) {
 					case EntitySuperTypeEditPart.VISUAL_ID :
-						result.appendIfCanExecute(new Entity_SuperType4001StartCommand(
+						result.appendIfCanExecute(new CreateEntity_SuperType4001StartCommand(
 								requestEx));
 						break;
 				}
@@ -63,6 +65,7 @@ public class EntityGraphicalNodeEditPolicy extends GraphicalNodeEditPolicy {
 		}
 		return null;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -106,6 +109,7 @@ public class EntityGraphicalNodeEditPolicy extends GraphicalNodeEditPolicy {
 		}
 		return null;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -139,6 +143,7 @@ public class EntityGraphicalNodeEditPolicy extends GraphicalNodeEditPolicy {
 				.getEditingDomainFor(element);
 		return new WrappingCommand(domain, result);
 	}
+
 	/**
 	 * @generated
 	 */

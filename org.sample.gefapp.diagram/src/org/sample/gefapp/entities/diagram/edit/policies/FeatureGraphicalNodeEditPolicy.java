@@ -9,12 +9,14 @@ import org.eclipse.gef.requests.ReconnectRequest;
  * @generated
  */
 public class FeatureGraphicalNodeEditPolicy extends GraphicalNodeEditPolicy {
+
 	/**
 	 * @generated
 	 */
 	protected Command getConnectionCreateCommand(CreateConnectionRequest request) {
 		return null;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -22,12 +24,14 @@ public class FeatureGraphicalNodeEditPolicy extends GraphicalNodeEditPolicy {
 			CreateConnectionRequest request) {
 		return null;
 	}
+
 	/**
 	 * @generated
 	 */
 	protected Command getReconnectSourceCommand(ReconnectRequest request) {
 		return null;
 	}
+
 	/**
 	 * @generated
 	 */

@@ -34,10 +34,12 @@ public class FeatureNameEditPart extends AbstractGraphicalEditPart
 	 * @generated
 	 */
 	public static final int VISUAL_ID = 5002;
+
 	/**
 	 * @generated
 	 */
 	private final ClientFactory clientFactory;
+
 	/**
 	 * @generated
 	 */
@@ -46,18 +48,21 @@ public class FeatureNameEditPart extends AbstractGraphicalEditPart
 		setModel(model);
 		this.clientFactory = clientFactory;
 	}
+
 	/**
 	 * @generated
 	 */
 	public boolean isSelectable() {
 		return false;
 	}
+
 	/**
 	 * @generated
 	 */
 	public Node getDiagramNode() {
 		return (Node) getModel();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -65,6 +70,7 @@ public class FeatureNameEditPart extends AbstractGraphicalEditPart
 		installEditPolicy(EditPolicy.DIRECT_EDIT_ROLE,
 				new LabelDirectEditPolicy());
 	}
+
 	/**
 	 * @generated
 	 */
@@ -80,6 +86,23 @@ public class FeatureNameEditPart extends AbstractGraphicalEditPart
 		}
 		return labelRefresher;
 	}
+
+	/**
+	 * @generated
+	 */
+	protected void refreshVisuals() {
+		super.refreshVisuals();
+		refreshLabel();
+	}
+
+	/**
+	 * @generated
+	 */
+	protected void refreshLabel() {
+		getLabel().setText(getLabelText());
+		getLabel().setIcon(getLabelIcon());
+	}
+
 	/**
 	 * @generated
 	 */
@@ -98,6 +121,7 @@ public class FeatureNameEditPart extends AbstractGraphicalEditPart
 		}
 		super.performRequest(req);
 	}
+
 	/**
 	 * @generated
 	 */
@@ -119,6 +143,7 @@ public class FeatureNameEditPart extends AbstractGraphicalEditPart
 		}
 		return manager;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -128,6 +153,7 @@ public class FeatureNameEditPart extends AbstractGraphicalEditPart
 		}
 		getManager().show();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -147,6 +173,7 @@ public class FeatureNameEditPart extends AbstractGraphicalEditPart
 		return new MessageFormatLabelTextDisplayer(null, null, null,
 				new EAttribute[]{EntitiesPackage.eINSTANCE.getFeature_Name()});
 	}
+
 	/**
 	 * @generated
 	 */
@@ -179,12 +206,21 @@ public class FeatureNameEditPart extends AbstractGraphicalEditPart
 		}
 		return result;
 	}
+
 	/**
 	 * @generated
 	 */
 	protected Image getLabelIcon() {
-		return null;
+		Image image = null;
+		try {
+			image = clientFactory.getImageProvider().getImage(
+					getDiagramNode().getElement().eClass());
+		} catch (Exception e) {
+			// 
+		}
+		return image;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -207,6 +243,7 @@ public class FeatureNameEditPart extends AbstractGraphicalEditPart
 		registerVisuals();
 		refreshVisuals();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -226,6 +263,7 @@ public class FeatureNameEditPart extends AbstractGraphicalEditPart
 			updatableParent.addNotifier(getDiagramNode().getElement());
 		}
 	}
+
 	/**
 	 * @generated
 	 */

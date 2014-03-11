@@ -10,10 +10,12 @@ import org.sample.gefapp.entities.diagram.part.EntitiesVisualIDRegistry;
  * @generated
  */
 public class FeatureNameViewFactory implements IViewDecorator {
+
 	/**
 	 * @generated
 	 */
 	public static FeatureNameViewFactory INSTANCE = new FeatureNameViewFactory();
+
 	/**
 	 * @generated
 	 */

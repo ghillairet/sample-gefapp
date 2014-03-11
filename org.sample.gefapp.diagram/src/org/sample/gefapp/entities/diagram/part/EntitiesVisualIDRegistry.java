@@ -15,6 +15,7 @@ import org.sample.gefapp.entities.diagram.edit.parts.FeatureEditPart;
  * @generated
  */
 public class EntitiesVisualIDRegistry {
+
 	/**
 	 * @generated
 	 */
@@ -29,6 +30,7 @@ public class EntitiesVisualIDRegistry {
 		}
 		return diagram != null ? diagram.getType() : null;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -43,6 +45,7 @@ public class EntitiesVisualIDRegistry {
 		return org.sample.gefapp.entities.diagram.part.EntitiesVisualIDRegistry
 				.getVisualID(view.getType());
 	}
+
 	/**
 	 * @generated
 	 */
@@ -54,6 +57,7 @@ public class EntitiesVisualIDRegistry {
 			return -1;
 		}
 	}
+
 	/**
 	 * @generated
 	 */
@@ -107,6 +111,7 @@ public class EntitiesVisualIDRegistry {
 		}
 		return -1;
 	}
+
 	/**
 	 * User can change implementation of this method to handle some specificsituations not covered by default logic.
 	 * @generated

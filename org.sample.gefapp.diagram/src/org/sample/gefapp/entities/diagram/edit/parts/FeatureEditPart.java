@@ -3,6 +3,8 @@ package org.sample.gefapp.entities.diagram.edit.parts;
 import java.util.Iterator;
 
 import org.eclipse.draw2d.Figure;
+import org.eclipse.draw2d.GridData;
+import org.eclipse.draw2d.GridLayout;
 import org.eclipse.draw2d.IFigure;
 import org.eclipse.draw2d.Label;
 import org.eclipse.draw2d.Layer;
@@ -45,14 +47,17 @@ public class FeatureEditPart extends BaseNodeEditPart {
 	 * @generated
 	 */
 	public static final int VISUAL_ID = 3001;
+
 	/**
 	 * @generated
 	 */
 	protected IFigure primaryShape;
+
 	/**
 	 * @generated
 	 */
 	private final ClientFactory clientFactory;
+
 	/**
 	 * @generated
 	 */
@@ -61,6 +66,7 @@ public class FeatureEditPart extends BaseNodeEditPart {
 		setModel(model);
 		this.clientFactory = clientFactory;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -80,6 +86,7 @@ public class FeatureEditPart extends BaseNodeEditPart {
 			}
 		});
 	}
+
 	/**
 	 * @generated
 	 */
@@ -87,6 +94,7 @@ public class FeatureEditPart extends BaseNodeEditPart {
 		ResizableEditPolicy result = new ResizableEditPolicy();
 		return result;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -103,12 +111,14 @@ public class FeatureEditPart extends BaseNodeEditPart {
 		}
 		return invisibleRectangle;
 	}
+
 	/**
 	 * @generated
 	 */
 	private IFigure createDecorationPane() {
 		return new Layer();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -120,6 +130,7 @@ public class FeatureEditPart extends BaseNodeEditPart {
 	public IDecorationManager getDecorationManager() {
 		return myDecorationManager;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -128,6 +139,7 @@ public class FeatureEditPart extends BaseNodeEditPart {
 				decorationShape);
 		return result;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -136,12 +148,14 @@ public class FeatureEditPart extends BaseNodeEditPart {
 		primaryShape = figure;
 		return primaryShape;
 	}
+
 	/**
 	 * @generated
 	 */
 	public FeatureFigure getPrimaryShape() {
 		return (FeatureFigure) primaryShape;
 	}
+
 	/**
 	 * Default implementation treats passed figure as content pane.
 	 * Respects layout one may have set for generated figure.
@@ -156,6 +170,7 @@ public class FeatureEditPart extends BaseNodeEditPart {
 		}
 		return nodeShape; // use nodeShape itself as contentPane
 	}
+
 	/**
 	 * @generated
 	 */
@@ -170,12 +185,14 @@ public class FeatureEditPart extends BaseNodeEditPart {
 		}
 		return contentPane;
 	}
+
 	/**
 	 * @generated
 	 */
 	public Node getDiagramNode() {
 		return (Node) getModel();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -187,23 +204,23 @@ public class FeatureEditPart extends BaseNodeEditPart {
 		}
 		return false;
 	}
+
 	/**
 	 * @generated
 	 */
 	protected boolean removeFixedChild(EditPart childEditPart) {
 		return false;
 	}
+
 	/**
 	 * Returns the label which should be direct-edited by default.
 	 * @generated
 	 */
 	private EditPart getPrimaryLabelEditPart() {
-		for (Iterator it = getDiagramNode().getChildren().iterator(); it
-				.hasNext();) {
-			View nextChild = (View) it.next();
+		for(Iterator<?> it = getDiagramNode().getChildren().iterator(); it.hasNext(); ) {
+			View nextChild = (View)it.next();
 			if (EntitiesVisualIDRegistry.getVisualID(nextChild) == FeatureNameEditPart.VISUAL_ID) {
-				return (EditPart) getViewer().getEditPartRegistry().get(
-						nextChild);
+				return (EditPart) getViewer().getEditPartRegistry().get(nextChild);
 			}
 		}
 		return null;
@@ -232,6 +249,7 @@ public class FeatureEditPart extends BaseNodeEditPart {
 		}
 		super.performRequest(req);
 	}
+
 	/**
 	 * @generated
 	 */
@@ -249,6 +267,7 @@ public class FeatureEditPart extends BaseNodeEditPart {
 		}
 		return getPrimaryLabelEditPart();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -258,6 +277,7 @@ public class FeatureEditPart extends BaseNodeEditPart {
 		}
 		super.addChildVisual(childEditPart, -1);
 	}
+
 	/**
 	 * @generated
 	 */
@@ -290,17 +310,15 @@ public class FeatureEditPart extends BaseNodeEditPart {
 		 */
 		public FeatureFigure() {
 
-			ToolbarLayout layoutThis = new ToolbarLayout();
-			layoutThis.setStretchMinorAxis(true);
-			layoutThis.setMinorAlignment(ToolbarLayout.ALIGN_TOPLEFT);
-
-			layoutThis.setSpacing(5);
-			layoutThis.setVertical(true);
-
+			GridLayout layoutThis = new GridLayout();
+			layoutThis.numColumns = 1;
+			layoutThis.makeColumnsEqualWidth = true;
 			this.setLayoutManager(layoutThis);
 
 			this.setCornerDimensions(new Dimension(8, 8));
 			this.setFillXOR(true);
+			this.setOutline(false);
+			this.setLineWidth(0);
 			this.setForegroundColor(THIS_FORE);
 			this.setBackgroundColor(THIS_BACK);
 
@@ -315,10 +333,21 @@ public class FeatureEditPart extends BaseNodeEditPart {
 			fFigureFeatureNameFigure = new Label();
 
 			fFigureFeatureNameFigure.setText("<..>");
+			fFigureFeatureNameFigure
+					.setForegroundColor(FFIGUREFEATURENAMEFIGURE_FORE);
 
 			fFigureFeatureNameFigure.setFont(FFIGUREFEATURENAMEFIGURE_FONT);
 
-			this.add(fFigureFeatureNameFigure);
+			GridData constraintFFigureFeatureNameFigure = new GridData();
+			constraintFFigureFeatureNameFigure.verticalAlignment = GridData.CENTER;
+			constraintFFigureFeatureNameFigure.horizontalAlignment = GridData.BEGINNING;
+			constraintFFigureFeatureNameFigure.horizontalIndent = 0;
+			constraintFFigureFeatureNameFigure.horizontalSpan = 1;
+			constraintFFigureFeatureNameFigure.verticalSpan = 1;
+			constraintFFigureFeatureNameFigure.grabExcessHorizontalSpace = false;
+			constraintFFigureFeatureNameFigure.grabExcessVerticalSpace = true;
+			this.add(fFigureFeatureNameFigure,
+					constraintFFigureFeatureNameFigure);
 
 		}
 
@@ -334,17 +363,22 @@ public class FeatureEditPart extends BaseNodeEditPart {
 	/**
 	 * @generated
 	 */
-	static final Color THIS_FORE = new Color(null, 111, 142, 194);
+	static final Color THIS_FORE = new Color(null, 255, 250, 230);
 
 	/**
 	 * @generated
 	 */
-	static final Color THIS_BACK = new Color(null, 242, 245, 252);
+	static final Color THIS_BACK = new Color(null, 255, 250, 230);
+
+	/**
+	 * @generated
+	 */
+	static final Color FFIGUREFEATURENAMEFIGURE_FORE = new Color(null, 0, 0, 0);
 
 	/**
 	 * @generated
 	 */
 	static final Font FFIGUREFEATURENAMEFIGURE_FONT = new Font(
-			Display.getCurrent(), "Verdana", 8, SWT.BOLD);
+			Display.getCurrent(), "Verdana", 11, SWT.NORMAL);
 
 }

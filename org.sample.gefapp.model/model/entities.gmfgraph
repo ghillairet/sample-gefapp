@@ -1,196 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gmfgraph:Canvas
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition"
-    name="ui">
-  <figures
-      name="Default">
-    <figures
-        xsi:type="gmfgraph:PolygonDecoration"
-        name="superTypeTargetDecoration">
-      <foregroundColor
-          xsi:type="gmfgraph:RGBColor"
-          red="32"
-          green="104"
-          blue="160"/>
-      <template
-          x="-1"
-          y="1"/>
-      <template
-          x="-1"
-          y="-1"/>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="ui">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolygonDecoration" name="superTypeTargetDecoration" lineWidth="2">
+      <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+      <template x="-1" y="1"/>
+      <template x="-1" y="-1"/>
       <template/>
     </figures>
-    <descriptors
-        name="EntityFigure">
-      <actualFigure
-          xsi:type="gmfgraph:RoundedRectangle"
-          name="EntityFigure"
-          lineWidth="3"
-          cornerWidth="6"
-          cornerHeight="6">
-        <layout
-            xsi:type="gmfgraph:FlowLayout"
-            vertical="true"
-            matchMinorSize="true"
-            forceSingleLine="true"/>
-        <foregroundColor
-            xsi:type="gmfgraph:RGBColor"
-            red="111"
-            green="142"
-            blue="194"/>
-        <backgroundColor
-            xsi:type="gmfgraph:RGBColor"
-            red="242"
-            green="245"
-            blue="252"/>
-        <minimumSize
-            dx="160"
-            dy="150"/>
-        <insets
-            top="5"
-            left="3"
-            bottom="3"
-            right="3"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="EntityNameFigure"
-            text="&lt;..>">
-          <font
-              xsi:type="gmfgraph:BasicFont"
-              faceName="Verdana"
-              style="BOLD"/>
+    <descriptors name="EntityFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="EntityFigure" lineWidth="2" cornerWidth="6" cornerHeight="6">
+        <layout xsi:type="gmfgraph:FlowLayout" vertical="true" matchMinorSize="true" forceSingleLine="true"/>
+        <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="255" green="250" blue="230"/>
+        <minimumSize dx="200" dy="150"/>
+        <insets top="5" left="3" bottom="3" right="3"/>
+        <children xsi:type="gmfgraph:Label" name="EntityNameFigure" text="&lt;..>">
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+          <font xsi:type="gmfgraph:BasicFont" faceName="Verdana" height="14"/>
         </children>
-        <children
-            xsi:type="gmfgraph:Rectangle"
-            name="featuresCompartmentFigure">
-          <foregroundColor
-              xsi:type="gmfgraph:RGBColor"
-              red="133"
-              green="156"
-              blue="194"/>
-          <backgroundColor
-              xsi:type="gmfgraph:RGBColor"
-              red="251"
-              green="252"
-              blue="255"/>
-          <minimumSize
-              dx="160"
-              dy="150"/>
-          <insets
-              top="5"
-              left="5"
-              bottom="5"
-              right="5"/>
+        <children xsi:type="gmfgraph:Rectangle" name="featuresCompartmentFigure" outline="false">
+          <foregroundColor xsi:type="gmfgraph:RGBColor" red="100" green="100" blue="100"/>
+          <backgroundColor xsi:type="gmfgraph:RGBColor" red="255" green="250" blue="230"/>
+          <minimumSize dx="200" dy="150"/>
+          <insets top="5" left="5" bottom="5" right="5"/>
         </children>
       </actualFigure>
-      <accessors
-          accessor="getFigureEntityNameFigure"
-          figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
-      <accessors
-          accessor="getFigurefeaturesCompartmentFigure"
-          figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
+      <accessors accessor="getFigureEntityNameFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+      <accessors accessor="getFigurefeaturesCompartmentFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
     </descriptors>
-    <descriptors
-        name="superTypeConnectionFigure">
-      <actualFigure
-          xsi:type="gmfgraph:PolylineConnection"
-          name="superTypeConnectionFigure"
-          targetDecoration="//@figures.0/@figures.0">
-        <foregroundColor
-            xsi:type="gmfgraph:RGBColor"
-            red="32"
-            green="104"
-            blue="160"/>
+    <descriptors name="superTypeConnectionFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="superTypeConnectionFigure" targetDecoration="//@figures.0/@figures.0">
+        <foregroundColor xsi:type="gmfgraph:RGBColor"/>
       </actualFigure>
     </descriptors>
-    <descriptors
-        name="superTypeConnectionLabelFigure">
-      <actualFigure
-          xsi:type="gmfgraph:Label"
-          name="superTypeConnectionLabelFigure"
-          text="supertype">
-        <font
-            xsi:type="gmfgraph:BasicFont"
-            faceName="Verdana"
-            style="BOLD"/>
+    <descriptors name="superTypeConnectionLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="superTypeConnectionLabelFigure" text="supertype">
+        <font xsi:type="gmfgraph:BasicFont" faceName="Verdana" height="12"/>
       </actualFigure>
     </descriptors>
-    <descriptors
-        name="FeatureFigure">
-      <actualFigure
-          xsi:type="gmfgraph:RoundedRectangle"
-          name="FeatureFigure"
-          xorFill="true">
-        <layout
-            xsi:type="gmfgraph:FlowLayout"
-            vertical="true"
-            matchMinorSize="true"
-            forceSingleLine="true"/>
-        <foregroundColor
-            xsi:type="gmfgraph:RGBColor"
-            red="111"
-            green="142"
-            blue="194"/>
-        <backgroundColor
-            xsi:type="gmfgraph:RGBColor"
-            red="242"
-            green="245"
-            blue="252"/>
-        <insets
-            top="5"
-            left="5"
-            bottom="5"
-            right="5"/>
-        <children
-            xsi:type="gmfgraph:Label"
-            name="FeatureNameFigure"
-            text="&lt;..>">
-          <font
-              xsi:type="gmfgraph:BasicFont"
-              faceName="Verdana"
-              height="8"
-              style="BOLD"/>
+    <descriptors name="FeatureFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="FeatureFigure" outline="false" lineWidth="0" xorFill="true">
+        <layout xsi:type="gmfgraph:GridLayout"/>
+        <foregroundColor xsi:type="gmfgraph:RGBColor" red="255" green="250" blue="230"/>
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="255" green="250" blue="230"/>
+        <insets top="5" left="5" bottom="5" right="5"/>
+        <children xsi:type="gmfgraph:Label" name="FeatureNameFigure" text="&lt;..>">
+          <layoutData xsi:type="gmfgraph:GridLayoutData" grabExcessVerticalSpace="true" horizontalAlignment="BEGINNING"/>
+          <foregroundColor xsi:type="gmfgraph:RGBColor"/>
+          <font xsi:type="gmfgraph:BasicFont" faceName="Verdana" height="11"/>
         </children>
       </actualFigure>
-      <accessors
-          accessor="getFigureFeatureNameFigure"
-          figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureFeatureNameFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="EntityReference">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="EntityReferenceConnectionFigure"/>
     </descriptors>
   </figures>
-  <nodes
-      name="Entity"
-      figure="EntityFigure"/>
-  <nodes
-      name="Feature"
-      figure="FeatureFigure"/>
-  <connections
-      name="superType"
-      figure="superTypeConnectionFigure"/>
-  <compartments
-      name="features"
-      figure="EntityFigure"
-      collapsible="true"
-      accessor="//@figures.0/@descriptors.0/@accessors.1"/>
-  <labels
-      name="EntityName"
-      figure="EntityFigure"
-      accessor="//@figures.0/@descriptors.0/@accessors.0">
-    <facets
-        xsi:type="gmfgraph:AlignmentFacet"
-        alignment="CENTER"/>
+  <nodes name="Entity" figure="EntityFigure">
+    <facets xsi:type="gmfgraph:GradientFacet" direction="NORTH_SOUTH"/>
+  </nodes>
+  <nodes name="Feature" figure="FeatureFigure"/>
+  <connections name="superType" figure="superTypeConnectionFigure"/>
+  <connections name="features" figure="EntityReference"/>
+  <compartments name="features" figure="EntityFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.1"/>
+  <labels name="EntityName" figure="EntityFigure" accessor="//@figures.0/@descriptors.0/@accessors.0">
+    <facets xsi:type="gmfgraph:AlignmentFacet"/>
   </labels>
-  <labels
-      name="superTypeConnectionName"
-      figure="superTypeConnectionLabelFigure"/>
-  <labels
-      name="FeatureName"
-      figure="FeatureFigure"
-      accessor="//@figures.0/@descriptors.3/@accessors.0">
-    <facets
-        xsi:type="gmfgraph:AlignmentFacet"
-        alignment="CENTER"/>
+  <labels name="superTypeConnectionName" figure="superTypeConnectionLabelFigure"/>
+  <labels name="FeatureName" figure="FeatureFigure" accessor="//@figures.0/@descriptors.3/@accessors.0">
+    <facets xsi:type="gmfgraph:AlignmentFacet"/>
   </labels>
+  <labels name="EntityReferenceName" figure="EntityReference"/>
 </gmfgraph:Canvas>

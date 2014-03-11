@@ -33,18 +33,23 @@ import org.sample.gefapp.entities.diagram.edit.policies.EntitySuperTypeEndpointE
 import org.sample.gefapp.entities.diagram.edit.policies.EntitySuperTypeGraphicalNodeEditPolicy;
 import org.sample.gefapp.entities.diagram.part.EntitiesVisualIDRegistry;
 
+
 /**
  * @generated
  */
 public class EntitySuperTypeEditPart extends BaseConnectionNodeEditPart {
 
+	
 	/**
 	 * @generated
 	 */
 	public static final int VISUAL_ID = 4001;
 	
-	private ClientFactory clientFactory;
-
+	/**
+	 * @generated
+	 */
+	private final ClientFactory clientFactory;
+	
 	/**
 	 * @generated
 	 */
@@ -53,55 +58,13 @@ public class EntitySuperTypeEditPart extends BaseConnectionNodeEditPart {
 		setModel(model);
 		this.clientFactory = clientFactory;
 	}
-	/**
-	 * @generated
-	 */
-	protected List getModelChildren() {
-		return getDiagramEdge().getVisibleChildren();
-	}
-	/**
-	 * @generated
-	 */
-	protected List getModelSourceConnections() {
-		return getDiagramEdge().getSourceEdges();
-	}
-	/**
-	 * @generated
-	 */
-	protected List getModelTargetConnections() {
-		return getDiagramEdge().getTargetEdges();
-	}
-	/**
-	 * @generated
-	 */
-	public ConnectionAnchor getSourceConnectionAnchor(ConnectionEditPart connection) {
-		return new ConnectionConnectionAnchor(getConnectionFigure());
-	}
 	
-	/**
-	 * @generated
-	 */
-	public ConnectionAnchor getSourceConnectionAnchor(Request request) {
-		return new ConnectionConnectionAnchor(getConnectionFigure());
-	}
 	
-	/**
-	 * @generated
-	 */
-	public ConnectionAnchor  getTargetConnectionAnchor(ConnectionEditPart connection) {
-		return new ConnectionConnectionAnchor(getConnectionFigure());
-	}
-	
-	/**
-	 * @generated
-	 */
-	public ConnectionAnchor  getTargetConnectionAnchor(Request request) {
-		return new ConnectionConnectionAnchor(getConnectionFigure());
-	}
 	/**
 	 * @generated
 	 */
 	private IDecorationManager myDecorationManager;
+	
 	
 	/**
 	 * @generated
@@ -109,6 +72,7 @@ public class EntitySuperTypeEditPart extends BaseConnectionNodeEditPart {
 	public IDecorationManager getDecorationManager() {
 		return myDecorationManager;
 	}
+	
 	/**
 	 * @generated
 	 */
@@ -125,7 +89,7 @@ public class EntitySuperTypeEditPart extends BaseConnectionNodeEditPart {
 	 * @generated
 	 */
 	private EditPart getPrimaryLabelEditPart() {
-		for(Iterator it = getDiagramEdge().getChildren().iterator(); it.hasNext(); ) {
+		for(Iterator<?> it = getDiagramEdge().getChildren().iterator(); it.hasNext(); ) {
 			View nextChild = (View)it.next();
 			if (EntitiesVisualIDRegistry.getVisualID(nextChild) == SuperTypeConnectionLabelEditPart.VISUAL_ID) {
 				return (EditPart) getViewer().getEditPartRegistry().get(nextChild);
@@ -133,6 +97,7 @@ public class EntitySuperTypeEditPart extends BaseConnectionNodeEditPart {
 		}
 		return null;
 	}
+	
 	/**
 	 * @generated
 	 */
@@ -157,6 +122,7 @@ public class EntitySuperTypeEditPart extends BaseConnectionNodeEditPart {
 		}
 		super.performRequest(req);
 	}
+	
 	/**
 	 * @generated
 	 */
@@ -182,18 +148,21 @@ public class EntitySuperTypeEditPart extends BaseConnectionNodeEditPart {
 	public Object getAdapter(@SuppressWarnings("rawtypes") Class key) {
 		return super.getAdapter(key);
 	}
+	
 	/**
 	 * @generated
 	 */
 	public void activate() {
 		super.activate();
 	}
+	
 	/**
 	 * @generated
 	 */
 	public void deactivate() {
 		super.deactivate();
 	}
+	
 	/**
 	 * @generated
 	 */
@@ -211,6 +180,7 @@ public class EntitySuperTypeEditPart extends BaseConnectionNodeEditPart {
 		super.addNotify();
 		getConnectionFigure().setConnectionRouter(new BendpointConnectionRouter());
 	}
+	
 	/**
 	 * @generated
 	 */
@@ -254,6 +224,7 @@ public class EntitySuperTypeEditPart extends BaseConnectionNodeEditPart {
 		private RotatableDecoration createTargetDecoration() {
 			PolygonDecoration df = new PolygonDecoration();
 	df.setFill(true);
+	df.setLineWidth(2);
 		df.setForegroundColor(DF_FORE
 	);
 	PointList pl = new PointList();
@@ -275,12 +246,12 @@ public class EntitySuperTypeEditPart extends BaseConnectionNodeEditPart {
 	/**
 	 * @generated
 	 */
-	static final Color THIS_FORE = new Color(null, 32, 104, 160);
+	static final Color THIS_FORE = new Color(null, 0, 0, 0);
 	
 	/**
 	 * @generated
 	 */
-	static final Color DF_FORE = new Color(null, 32, 104, 160);
+	static final Color DF_FORE = new Color(null, 0, 0, 0);
 	
 
 }

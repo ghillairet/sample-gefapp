@@ -22,6 +22,7 @@ import org.sample.gefapp.entities.diagram.part.EntitiesVisualIDRegistry;
  * @generated
  */
 public class EntityFeaturesLayoutEditPolicy extends ListLayoutEditPolicy {
+
 	/**
 	 * @generated
 	 */
@@ -52,6 +53,7 @@ public class EntityFeaturesLayoutEditPolicy extends ListLayoutEditPolicy {
 		}
 		return null;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -81,6 +83,7 @@ public class EntityFeaturesLayoutEditPolicy extends ListLayoutEditPolicy {
 		}
 		return null;
 	}
+
 	/**
 	 * @generated
 	 */

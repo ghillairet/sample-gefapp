@@ -4,17 +4,21 @@ import org.eclipse.emf.common.command.Command;
 import org.eclipse.emf.common.command.CommandWrapper;
 import org.eclipse.emf.common.command.CompoundCommand;
 import org.eclipse.emf.common.command.UnexecutableCommand;
+import org.eclipse.emf.edit.command.SetCommand;
 import org.eclipse.emf.edit.domain.AdapterFactoryEditingDomain;
 import org.eclipse.emf.edit.domain.EditingDomain;
 import org.eclipse.gef.requests.ReconnectRequest;
 import org.eclipse.gmf.runtime.gwt.commands.ReconnectNotationalEdgeSourceCommand;
 import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.View;
+import org.sample.gefapp.entities.EntitiesPackage;
+import org.sample.gefapp.entities.Entity;
 
 /**
  * @generated
  */
 public class ReconnectEntity_SuperType4001SourceCommand extends CommandWrapper {
+
 	/**
 	 * @generated
 	 */
@@ -29,6 +33,7 @@ public class ReconnectEntity_SuperType4001SourceCommand extends CommandWrapper {
 	 * @generated
 	 */
 	private View oldSource;
+
 	/**
 	 * @generated
 	 */
@@ -45,6 +50,7 @@ public class ReconnectEntity_SuperType4001SourceCommand extends CommandWrapper {
 		this.newSource = newSource;
 		this.oldSource = edge.getSource();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -54,12 +60,17 @@ public class ReconnectEntity_SuperType4001SourceCommand extends CommandWrapper {
 		}
 		return super.prepare();
 	}
+
 	/**
 	 * @generated
 	 */
 	private boolean canReconnect() {
-		return false;
+		if (((Entity) newSource.getElement()).getSuperType() != null) {
+			return false;
+		}
+		return true;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -68,7 +79,12 @@ public class ReconnectEntity_SuperType4001SourceCommand extends CommandWrapper {
 				.getEditingDomainFor(oldSource.getDiagram().getElement());
 		CompoundCommand result = new CompoundCommand();
 		result.append(new ReconnectNotationalEdgeSourceCommand(edge, newSource));
-		result.append(UnexecutableCommand.INSTANCE);
+		result.append(SetCommand.create(editingDomain, oldSource.getElement(),
+				EntitiesPackage.eINSTANCE.getEntity_SuperType(),
+				SetCommand.UNSET_VALUE));
+		result.append(SetCommand.create(editingDomain, newSource.getElement(),
+				EntitiesPackage.eINSTANCE.getEntity_SuperType(), edge
+						.getTarget().getElement()));
 		return result;
 	}
 }

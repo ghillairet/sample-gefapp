@@ -19,6 +19,7 @@ import org.sample.gefapp.entities.diagram.view.factories.FeatureViewFactory;
  * @generated
  */
 public class CreateFeature3001Command extends AbstractCommand {
+
 	/**
 	 * @generated
 	 */
@@ -28,6 +29,7 @@ public class CreateFeature3001Command extends AbstractCommand {
 	 * @generated
 	 */
 	private final Command domainModelAddCommand;
+
 	/**
 	 * @generated
 	 */
@@ -55,6 +57,7 @@ public class CreateFeature3001Command extends AbstractCommand {
 				createdDomainElement, constraint, FeatureViewFactory.INSTANCE);
 		request.setCreatedObject(notationAddCommand.getCreatedView());
 	}
+
 	/**
 	 * @generated
 	 */
@@ -64,6 +67,7 @@ public class CreateFeature3001Command extends AbstractCommand {
 				&& notationAddCommand != null
 				&& notationAddCommand.canExecute();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -71,6 +75,7 @@ public class CreateFeature3001Command extends AbstractCommand {
 		return domainModelAddCommand != null && domainModelAddCommand.canUndo()
 				&& notationAddCommand != null && notationAddCommand.canUndo();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -78,6 +83,7 @@ public class CreateFeature3001Command extends AbstractCommand {
 		domainModelAddCommand.execute();
 		notationAddCommand.execute();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -85,6 +91,7 @@ public class CreateFeature3001Command extends AbstractCommand {
 		notationAddCommand.undo();
 		domainModelAddCommand.undo();
 	}
+
 	/**
 	 * @generated
 	 */

@@ -19,6 +19,7 @@ import org.sample.gefapp.entities.diagram.view.factories.EntityViewFactory;
  * @generated
  */
 public class CreateEntity2001Command extends AbstractCommand {
+
 	/**
 	 * @generated
 	 */
@@ -28,6 +29,7 @@ public class CreateEntity2001Command extends AbstractCommand {
 	 * @generated
 	 */
 	private final Command domainModelAddCommand;
+
 	/**
 	 * @generated
 	 */
@@ -54,6 +56,7 @@ public class CreateEntity2001Command extends AbstractCommand {
 				createdDomainElement, constraint, EntityViewFactory.INSTANCE);
 		request.setCreatedObject(notationAddCommand.getCreatedView());
 	}
+
 	/**
 	 * @generated
 	 */
@@ -63,6 +66,7 @@ public class CreateEntity2001Command extends AbstractCommand {
 				&& notationAddCommand != null
 				&& notationAddCommand.canExecute();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -70,6 +74,7 @@ public class CreateEntity2001Command extends AbstractCommand {
 		return domainModelAddCommand != null && domainModelAddCommand.canUndo()
 				&& notationAddCommand != null && notationAddCommand.canUndo();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -77,6 +82,7 @@ public class CreateEntity2001Command extends AbstractCommand {
 		domainModelAddCommand.execute();
 		notationAddCommand.execute();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -84,6 +90,7 @@ public class CreateEntity2001Command extends AbstractCommand {
 		notationAddCommand.undo();
 		domainModelAddCommand.undo();
 	}
+
 	/**
 	 * @generated
 	 */

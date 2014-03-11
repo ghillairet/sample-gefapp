@@ -26,6 +26,7 @@ import org.sample.gefapp.entities.diagram.part.EntitiesVisualIDRegistry;
  * @generated
  */
 public class DomainModelLayoutEditPolicy extends XYLayoutEditPolicyEx {
+
 	/**
 	 * @generated
 	 */
@@ -56,6 +57,7 @@ public class DomainModelLayoutEditPolicy extends XYLayoutEditPolicyEx {
 		}
 		return null;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -86,6 +88,7 @@ public class DomainModelLayoutEditPolicy extends XYLayoutEditPolicyEx {
 		}
 		return null;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -116,6 +119,7 @@ public class DomainModelLayoutEditPolicy extends XYLayoutEditPolicyEx {
 		}
 		return null;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -128,6 +132,7 @@ public class DomainModelLayoutEditPolicy extends XYLayoutEditPolicyEx {
 		feedback.translateToRelative(rect);
 		feedback.setBounds(rect.expand(getCreationFeedbackOffset(request)));
 	}
+
 	/**
 	 * @generated
 	 */

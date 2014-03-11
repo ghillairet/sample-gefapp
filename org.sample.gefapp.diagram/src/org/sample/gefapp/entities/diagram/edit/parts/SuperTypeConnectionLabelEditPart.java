@@ -39,16 +39,24 @@ public class SuperTypeConnectionLabelEditPart extends BaseLinkLabelEditPart
 	/**
 	 * @generated
 	 */
+	private final ClientFactory clientFactory;
+
+	/**
+	 * @generated
+	 */
 	public SuperTypeConnectionLabelEditPart(View model,
 			ClientFactory clientFactory) {
 		super(model);
+		this.clientFactory = clientFactory;
 	}
+
 	/**
 	 * @generated
 	 */
 	public Node getDiagramNode() {
 		return (Node) getModel();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -57,6 +65,7 @@ public class SuperTypeConnectionLabelEditPart extends BaseLinkLabelEditPart
 		installEditPolicy(EditPolicy.DIRECT_EDIT_ROLE,
 				new LabelDirectEditPolicy());
 	}
+
 	/**
 	 * @generated
 	 */
@@ -64,6 +73,7 @@ public class SuperTypeConnectionLabelEditPart extends BaseLinkLabelEditPart
 		getLabel().setText(getLabelText());
 		getLabel().setIcon(getLabelIcon());
 	}
+
 	/**
 	 * @generated
 	 */
@@ -79,6 +89,7 @@ public class SuperTypeConnectionLabelEditPart extends BaseLinkLabelEditPart
 		}
 		return labelRefresher;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -86,6 +97,7 @@ public class SuperTypeConnectionLabelEditPart extends BaseLinkLabelEditPart
 		super.refreshVisuals();
 		refreshLabel();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -104,6 +116,7 @@ public class SuperTypeConnectionLabelEditPart extends BaseLinkLabelEditPart
 		}
 		super.performRequest(req);
 	}
+
 	/**
 	 * @generated
 	 */
@@ -125,6 +138,7 @@ public class SuperTypeConnectionLabelEditPart extends BaseLinkLabelEditPart
 		}
 		return manager;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -134,6 +148,7 @@ public class SuperTypeConnectionLabelEditPart extends BaseLinkLabelEditPart
 		}
 		getManager().show();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -154,6 +169,7 @@ public class SuperTypeConnectionLabelEditPart extends BaseLinkLabelEditPart
 		// Ensure that you remove @generated or mark it @generated NOT
 		return null;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -186,12 +202,22 @@ public class SuperTypeConnectionLabelEditPart extends BaseLinkLabelEditPart
 		}
 		return result;
 	}
+
 	/**
 	 * @generated
 	 */
 	protected Image getLabelIcon() {
-		return null;
+		Image image = null;
+		try {
+			image = clientFactory.getImageProvider().getImage(
+					getUpdatableParent().getDiagramEdge().getTarget()
+							.getElement().eClass());
+		} catch (Exception e) {
+			// 
+		}
+		return image;
 	}
+
 	/**
 	 * @generated
 	 */
@@ -211,6 +237,7 @@ public class SuperTypeConnectionLabelEditPart extends BaseLinkLabelEditPart
 	public Label getLabel() {
 		return (Label) getFigure();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -231,6 +258,7 @@ public class SuperTypeConnectionLabelEditPart extends BaseLinkLabelEditPart
 			updatableParent.installRefresher(boundsRefresher);
 		}
 	}
+
 	/**
 	 * @generated
 	 */
@@ -244,6 +272,7 @@ public class SuperTypeConnectionLabelEditPart extends BaseLinkLabelEditPart
 		}
 		super.deactivate();
 	}
+
 	/**
 	 * @generated
 	 */
@@ -271,7 +300,7 @@ public class SuperTypeConnectionLabelEditPart extends BaseLinkLabelEditPart
 	/**
 	 * @generated
 	 */
-	static final Font THIS_FONT = new Font(Display.getCurrent(), "Verdana", 9,
-			SWT.BOLD);
+	static final Font THIS_FONT = new Font(Display.getCurrent(), "Verdana", 12,
+			SWT.NORMAL);
 
 }

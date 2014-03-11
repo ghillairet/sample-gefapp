@@ -15,6 +15,7 @@ import org.eclipse.gef.palette.SelectionToolEntry;
 import org.eclipse.gef.palette.ToolEntry;
 import org.eclipse.gef.tools.ConnectionCreationTool;
 import org.eclipse.gef.tools.CreationTool;
+import org.eclipse.gmf.runtime.gwt.client.ClientFactory;
 import org.eclipse.gmf.runtime.gwt.requests.CreateConnectionRequestEx;
 import org.eclipse.gmf.runtime.gwt.requests.CreateRequestEx;
 import org.eclipse.gmf.runtime.gwt.requests.ModelCreationFactory;
@@ -22,6 +23,7 @@ import org.eclipse.gmf.runtime.notation.Edge;
 import org.eclipse.gmf.runtime.notation.Node;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.swt.graphics.Image;
+import org.sample.gefapp.entities.EntitiesPackage;
 import org.sample.gefapp.entities.diagram.edit.parts.DomainModelEditPart;
 import org.sample.gefapp.entities.provider.EntitiesEditPluginImages;
 
@@ -31,8 +33,13 @@ import com.google.gwt.core.client.GWT;
  * @generated
  */
 public class EntitiesPaletteFactory {
-	
-	private final EntitiesEditPluginImages IMAGES = GWT.create(EntitiesEditPluginImages.class);
+
+	private final ClientFactory clientFactory;
+
+	public EntitiesPaletteFactory(ClientFactory clientFactory) {
+		assert clientFactory != null;
+		this.clientFactory = clientFactory;
+	}
 
 	/**
 	 * @generated
@@ -48,6 +55,7 @@ public class EntitiesPaletteFactory {
 		controls.add(new MarqueeToolEntry());
 		paletteRoot.add(createDefault1Group());
 	}
+
 	/**
 	 * Creates "Default" palette tool group
 	 * @generated
@@ -55,6 +63,7 @@ public class EntitiesPaletteFactory {
 	private PaletteContainer createDefault1Group() {
 		PaletteGroup paletteContainer = new PaletteGroup("Default");
 		paletteContainer.setDescription("Holds top-level non-container tools");
+		paletteContainer.setLargeIcon(paletteContainer.getSmallIcon());
 		{
 			PaletteEntry paletteEntry = createEntity1CreationTool();
 			if (paletteEntry != null) {
@@ -75,43 +84,56 @@ public class EntitiesPaletteFactory {
 		}
 		return paletteContainer;
 	}
+
 	/**
 	 * @generated
 	 */
 	private ToolEntry createEntity1CreationTool() {
 		final int[] visualIds = new int[]{2001};
-		NodeToolEntry entry = new NodeToolEntry("Entity", "Create new Entity",visualIds);
-		entry.setSmallIcon(ImageDescriptor.createFromImage(new Image(null, IMAGES.entity())));
+		NodeToolEntry entry = new NodeToolEntry("Entity", "Create new Entity",
+				visualIds);
+		entry.setSmallIcon(clientFactory.getImageProvider().getImageDescriptor(
+				EntitiesPackage.eINSTANCE.getEntity()));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
+
 	/**
 	 * @generated
 	 */
 	private ToolEntry createSuperType2CreationTool() {
 		final int[] visualIds = new int[]{4001};
-		LinkToolEntry entry = new LinkToolEntry("superType", "Create new superTypeConnection", visualIds);
+		LinkToolEntry entry = new LinkToolEntry("superType",
+				"Create new superTypeConnection", visualIds);
+		entry.setSmallIcon(clientFactory.getImageProvider().getImageDescriptor(
+				EntitiesPackage.eINSTANCE.getEntity_SuperType()));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
+
 	/**
 	 * @generated
 	 */
 	private ToolEntry createFeature3CreationTool() {
 		final int[] visualIds = new int[]{3001};
-		NodeToolEntry entry = new NodeToolEntry("Feature", "Create new Feature", visualIds);
-		entry.setSmallIcon(ImageDescriptor.createFromImage(new Image(null, IMAGES.feature())));
+		NodeToolEntry entry = new NodeToolEntry("Feature",
+				"Create new Feature", visualIds);
+		entry.setSmallIcon(clientFactory.getImageProvider().getImageDescriptor(
+				EntitiesPackage.eINSTANCE.getFeature()));
 		entry.setLargeIcon(entry.getSmallIcon());
 		return entry;
 	}
+
 	/**
 	 * @generated
 	 */
 	private static class NodeToolEntry extends CombinedTemplateCreationEntry {
+
 		/**
 		 * @generated
 		 */
 		private final int[] myVisualIDs;
+
 		/**
 		 * @generated
 		 */
@@ -120,6 +142,7 @@ public class EntitiesPaletteFactory {
 					null, null);
 			myVisualIDs = visualIDs;
 		}
+
 		/**
 		 * @generated
 		 */
@@ -154,14 +177,17 @@ public class EntitiesPaletteFactory {
 			return result;
 		}
 	}
+
 	/**
 	 * @generated
 	 */
 	private static class LinkToolEntry extends ConnectionCreationToolEntry {
+
 		/**
 		 * @generated
 		 */
 		private final int[] myVisualIDs;
+
 		/**
 		 * @generated
 		 */
@@ -170,6 +196,7 @@ public class EntitiesPaletteFactory {
 					null, null);
 			myVisualIDs = visualIDs;
 		}
+
 		/**
 		 * @generated
 		 */
@@ -189,4 +216,5 @@ public class EntitiesPaletteFactory {
 			return result;
 		}
 	}
+
 }

@@ -18,6 +18,7 @@ import org.eclipse.gef.Request;
 import org.eclipse.gef.RequestConstants;
 import org.eclipse.gef.commands.Command;
 import org.eclipse.gef.editparts.AbstractGraphicalEditPart;
+import org.eclipse.gef.handles.AbstractHandle;
 import org.eclipse.gmf.runtime.gwt.client.ClientFactory;
 import org.eclipse.gmf.runtime.gwt.commands.CreateNotationalElementCommand;
 import org.eclipse.gmf.runtime.gwt.commands.CreateNotationalNodeCommand;
@@ -38,18 +39,23 @@ import org.sample.gefapp.entities.diagram.edit.policies.EntityFeaturesLayoutEdit
 import org.sample.gefapp.entities.diagram.part.EntitiesVisualIDRegistry;
 import org.sample.gefapp.entities.diagram.view.factories.FeatureViewFactory;
 
+
 /**
  * @generated
  */
 public class EntityFeaturesEditPart extends BaseNodeEditPart {
 
+	
 	/**
 	 * @generated
 	 */
 	public static final int VISUAL_ID = 7001;
 	
-	private ClientFactory clientFactory;
-
+	/**
+	 * @generated
+	 */
+	private final ClientFactory clientFactory;
+	
 	/**
 	 * @generated
 	 */
@@ -58,41 +64,49 @@ public class EntityFeaturesEditPart extends BaseNodeEditPart {
 		setModel(model);
 		this.clientFactory = clientFactory;
 	}
+	
+	
 	/**
 	 * @generated
 	 */
 	public boolean isSelectable() {
 		return false;
 	}
+	
 	/**
 	 * @generated
 	 */
-	protected List getModelChildren() {
+	@SuppressWarnings("unchecked")
+	protected List<View> getModelChildren() {
 		DrawerStyle style = (DrawerStyle) getDiagramNode().getStyle(NotationPackage.eINSTANCE.getDrawerStyle());
 		if (style != null && style.isCollapsed()) {
-			return Collections.EMPTY_LIST;
+			return Collections.<View> emptyList();
 		}
-		return getDiagramNode().getVisibleChildren();
+		return (List<View>) getDiagramNode().getVisibleChildren();
 	}
+	
 	/**
 	 * @generated
 	 */
 	public Node getDiagramNode() {
 		return (Node) getModel();
 	}
+	
 	/**
 	 * @generated
 	 */
 	protected void createEditPolicies() {
 		installEditPolicy(EditPolicy.LAYOUT_ROLE, new EntityFeaturesLayoutEditPolicy());
 	}
+	
 	/**
 	 * Returns the selection handles that should be contributed to the parent when it becomes selected.
 	 * @generated
 	 */
-	public List createSelectionHandles() {
-	return Collections.singletonList(new CompartmentCollapseHandle(this, getTitleName()));
+	public List<? extends AbstractHandle> createSelectionHandles() {
+		return Collections.singletonList(new CompartmentCollapseHandle(this, getTitleName()));
 	}
+	
 	/**
 	 * @generated
 	 */
@@ -106,12 +120,14 @@ public class EntityFeaturesEditPart extends BaseNodeEditPart {
 		}
 		super.performRequest(req);
 	}
+	
 	/**
 	 * @generated
 	 */
 	protected String getTitleName() {
-	return "";	
+		return "";	
 	}
+	
 	/**
 	 * @generated
 	 */
@@ -127,6 +143,7 @@ public class EntityFeaturesEditPart extends BaseNodeEditPart {
 		scrollPane.setViewport(viewport);
 		return result;
 	}
+	
 	/**
 	 * @generated
 	 */
@@ -134,10 +151,12 @@ public class EntityFeaturesEditPart extends BaseNodeEditPart {
 	public Object getAdapter(@SuppressWarnings("rawtypes") Class key) {
 		return super.getAdapter(key);
 	}
+	
 	/**
 	 * @generated
 	 */
 	protected IFigure contentPane;
+	
 	
 	/**
 	 * @generated
@@ -148,6 +167,7 @@ public class EntityFeaturesEditPart extends BaseNodeEditPart {
 		}
 		return contentPane;
 	}
+	
 	/**
 	 * @generated
 	 */
@@ -156,6 +176,7 @@ public class EntityFeaturesEditPart extends BaseNodeEditPart {
 			shape.setLayoutManager(new StackLayout());
 		}
 	}
+	
 	/**
 	 * @generated
 	 */
@@ -163,16 +184,19 @@ public class EntityFeaturesEditPart extends BaseNodeEditPart {
 		super.activate();
 		installRefresher(getNotationModelRefresher());
 	}
+	
 	/**
 	 * @generated
 	 */
 	public void deactivate() {
 		super.deactivate();
 	}
+	
 	/**
 	 * @generated
 	 */
 	private ChildNotationModelRefresher notationModelRefresher;
+	
 	
 	/**
 	 * @generated
@@ -183,6 +207,7 @@ public class EntityFeaturesEditPart extends BaseNodeEditPart {
 		}
 		return notationModelRefresher;
 	}
+	
 	/**
 	 * @generated
 	 */
@@ -191,6 +216,7 @@ public class EntityFeaturesEditPart extends BaseNodeEditPart {
 		public NotationModelRefresher(AbstractGraphicalEditPart part) {
 			super(part);
 		}
+		
 		/**
 		 * @generated
 		 */
@@ -203,6 +229,7 @@ public class EntityFeaturesEditPart extends BaseNodeEditPart {
 			result = result && notification.getNotifier().equals(getDiagramNode().getElement());
 			return result;
 		}
+		
 		/**
 		 * @generated
 		 */
@@ -220,18 +247,19 @@ public class EntityFeaturesEditPart extends BaseNodeEditPart {
 					return null;
 			}
 		}
+		
 		/**
 		 * @generated
 		 */
-		protected List getSemanticChildNodes() {
-			List result = new LinkedList();
+		protected List<ElementDescriptor> getSemanticChildNodes() {
+			List<ElementDescriptor> result = new LinkedList<ElementDescriptor>();
 			View viewObject = getHost();
 			EObject modelObject = viewObject.getElement();
 			EObject nextValue;
 			int nodeVID;
-			for(Iterator it = ((Entity)modelObject).getFeatures()
+			for(Iterator<? extends EObject> it = ((Entity)modelObject).getFeatures()
 			.iterator(); it.hasNext(); ) {
-				nextValue = (EObject) it.next();
+				nextValue = it.next();
 				nodeVID = EntitiesVisualIDRegistry.getNodeVisualID(viewObject, nextValue);
 				if (FeatureEditPart.VISUAL_ID == nodeVID) {
 					result.add(new ElementDescriptor(nextValue, nodeVID));
@@ -239,6 +267,7 @@ public class EntityFeaturesEditPart extends BaseNodeEditPart {
 				}
 			return result;
 		}
+		
 		/**
 		 * Returns whether a notational element should be created for the given domain element. 
 		 * The generated code respects canonical style. If the canonycal style is not present, true is always returned. 
